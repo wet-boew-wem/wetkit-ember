@@ -1,0 +1,64 @@
+/* =============================================================================
+   Overlay
+   ========================================================================== */
+
+div#overlay {
+  min-width:200px;
+  max-width:800px;
+}
+#overlay-content {
+  padding:0;
+}
+.overlay #branding {
+  background-color: #fff;
+  padding:20px 20px 0px;
+  border-bottom:1px solid #ddd;
+}
+#overlay-titlebar,
+.overlay .breadcrumb,
+.overlay .region-help,
+.overlay #left,
+.overlay #footer {
+  display:none;
+}
+.overlay #content {
+  padding:0;
+  margin:0;
+  border:0 solid transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.overlay .content,
+.overlay .actions {
+  padding:20px 20px 0;
+}
+.overlay #page {
+  margin:0;
+  padding:0;
+}
+.overlay #content {
+  padding: 0;
+}
+
+/* Disable overlay message */
+#overlay-disable-message {
+  background-color:#addafc;
+}
+#overlay-disable-message a,
+#overlay-disable-message a:visited {
+  color:#000;
+}
+#overlay-disable-message a:focus,
+#overlay-disable-message a:active {
+  outline: none;
+  text-decoration:underline;
+}
+.overlay-disable-message-focused a {
+  padding:0.4em 0.6em;
+}
+.overlay-disable-message-focused #overlay-dismiss-message {
+  background-color:#59a0d8;
+  border-radius:8px;
+  color:#fff;
+}

@@ -1,0 +1,28 @@
+/* =============================================================================
+   Toolbar
+   ========================================================================== */
+
+.toolbar .tray a {
+ color:#555;
+}
+.toolbar .menu .menu a {
+ color:#555;
+}
+.toolbar .tray a:hover {
+  color:#222;
+  text-decoration:none;
+}
+.toolbar .vertical > .lining:before {
+  box-shadow:0 0 3px 3px rgba(0, 0, 0, 0.03); /* LTR */
+}
+.toolbar .tray a:active,
+.toolbar .tray a.active {
+  color:#222;
+}
+.toolbar .tray a:hover {
+  color:#000;
+}
+.toolbar .vertical > .lining,
+.toolbar .vertical > .lining:before {
+  border-right:1px solid #ddd; /* LTR */
+}

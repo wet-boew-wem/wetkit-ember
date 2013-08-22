@@ -1,0 +1,21 @@
+name = WetKit Ember
+description = A responsive administration theme based on the Ember theme for Spark.
+package = WetKit
+core = 7.x
+
+; Stylesheets
+stylesheets[screen][] = css/wetkit_ember.hacks.css
+stylesheets[screen][] = css/wetkit_ember.normalize.css
+stylesheets[screen][] = css/wetkit_ember.styles.css
+
+; Settings
+settings[shortcut_module_link] = 1
+
+; Regions
+regions[content] = Content
+regions[help] = Help
+regions[messages] = Messages
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = First sidebar
+regions_hidden[] = sidebar_first

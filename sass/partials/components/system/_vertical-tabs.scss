@@ -1,0 +1,19 @@
+/* =============================================================================
+   Vertical tabs
+   ========================================================================== */
+
+div.vertical-tabs fieldset {
+    box-shadow: none;
+}
+.vertical-tabs:focus,
+ul.vertical-tabs-list:focus,
+li.selected:focus {
+  outline:0px solid transparent;
+}
+.vertical-tabs details > .details-wrapper {
+  border:1px solid transparent;
+  padding:10px 20px;
+}
+.vertical-tabs-pane div.form-item {
+  display:block;
+}

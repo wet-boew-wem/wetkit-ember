@@ -1,0 +1,59 @@
+/* =============================================================================
+   Dashboard
+   ========================================================================== */
+
+#dashboard .region {
+  margin:0;
+}
+#dashboard .dashboard-region div.block h2 {
+  background:#fff;
+}
+#dashboard div.block h2 {
+  font-size:1em;
+  margin:0;
+  padding:3px 10px;
+}
+#dashboard div.block div.content {
+  padding:10px 10px 20px; /* LTR */
+}
+#dashboard div.block div.content ul.menu {
+  margin-left:20px; /* LTR */
+}
+#dashboard .dashboard-region .block {
+  background:#fff;
+  border:1px solid #ddd;
+  -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,0.03);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,0.03);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,0.03);
+}
+#dashboard div#dashboard_main {
+  margin-right:1.5%;
+  width:48%;
+}
+#dashboard div#dashboard_sidebar {
+  width:48%;
+}
+#dashboard .canvas-content a.button {
+  color:#fff;
+  margin:10px 0 0;
+  text-decoration: none;
+}
+#dashboard .ui-sortable {
+  border:2px dotted #ccc;
+  padding:10px 10px 0;
+}
+#dashboard #disabled-blocks .region {
+  background-color:transparent;
+  border:none;
+  padding:0;
+}
+#dashboard #disabled-blocks .block {
+  background-color:#666;
+}
+#dashboard #disabled-blocks .block, #dashboard .block-placeholder {
+  background-color:#666;
+  border-radius:4px;
+  float:left;
+  margin:3px 6px 3px 0;
+  padding:5px 4px 5px 8px;
+}

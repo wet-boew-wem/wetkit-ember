@@ -1,0 +1,124 @@
+
+/* =============================================================================
+   Views
+   ========================================================================== */
+
+.views-admin h1.unit-title {
+  font-size:2.5em;
+  font-family:'Source Sans Light';
+  line-height:none;
+  margin-bottom:inherit;
+  margin-top:inherit;
+  font-weight:normal;
+}
+.dropbutton-arrow {
+  line-height:0;
+  position:absolute;
+  right:40%;
+  top:50%;
+  margin-top:-0.1666em;
+}
+.dropbutton-wrapper {
+  font-size:inherit;
+  line-height:inherit;
+}
+.dropbutton input.form-submit {
+  color:#555;
+  font-weight:normal;
+}
+.views-ui-display-tab-bucket .dropbutton-wrapper {
+  position:absolute;
+  right:0;
+  top:4px;
+}
+.views-displays .secondary a {
+  display:inherit;
+  font-size:inherit;
+  line-height:inherit;
+  padding: 4px 8px;
+  border: 1px solid #CBCBCB;
+}
+.views-displays ul.secondary li a:hover,
+.views-displays ul.secondary li.active a,
+.views-displays ul.secondary li.active a.active {
+  background-color:inherit;
+  color:inherit;
+  border: 1px solid #2865B8;
+}
+.views-displays ul.secondary li.add.open a,
+.views-displays ul.secondary li.add.open a:hover {
+  border-color: #CBCBCB;
+  border-bottom: none;
+  padding-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.views-displays ul.secondary a .icon.add,
+.views-displays ul.secondary a:hover .icon.add {
+  background-position: center 3px;
+}
+.views-displays .secondary a:focus {
+  outline:inherit;
+}
+.views-displays ul.secondary li a {
+  background-color:inherit;
+}
+.views-display-top {
+  background-color:inherit;
+  border-bottom:inherit;
+  position:relative;
+  padding: 8px 0;
+  margin-bottom: 1em;
+}
+.views-display-top .dropbutton-wrapper {
+  width:auto;
+  position:absolute;
+  right:0;
+  top:0;
+}
+.views-displays {
+  border:0px solid transparent;
+  padding-bottom:0;
+}
+.views-ui-display-tab-bucket > h3,
+.views-ui-display-tab-bucket > .views-display-setting {
+  padding:0 0 0.5em;
+}
+ul#views-display-menu-tabs {
+  margin:0px;
+}
+.views-ui-display-tab-bucket {
+  line-height:20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.views-ui-display-tab-bucket h3 {
+  font-size:inherit;
+  font-weight:bold;
+  padding:0 0 5px;
+  margin:0 0 1em;
+  border-bottom:1px solid #efefef;
+}
+.views-display-column {
+  border:0px solid transparent;
+}
+.views-display-column > .ctools-collapsible-handle {
+  border-color: #ccc;
+}
+#edit-display-settings-top {
+  border:0px solid transparent;
+  line-height:2.5em;
+  margin:0;
+  padding:0;
+  position:relative;
+}
+#edit-display-settings-main {
+  padding-bottom: 15px;
+}
+#edit-display-settings {
+  margin:0;
+}
+.views-ui-display-tab-bucket .even {
+  background-color:inherit;
+}
+

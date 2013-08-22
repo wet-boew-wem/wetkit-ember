@@ -1,0 +1,27 @@
+/* =============================================================================
+   Help
+   ========================================================================== */
+
+#help {
+  margin:1em 0;
+  line-height:1.6em;
+}
+.region .region-help ul {
+  margin:0 0 20px 0;
+}
+#help div.more-help-link {
+  text-align: right; /* LTR */
+}
+.region-help {
+  background-color:#fff;
+  padding:20px 30px 0;
+  border:1px solid #dddddd;
+  -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,0.03);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,0.03);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,0.03);
+  margin-bottom:1em;
+}
+.region-help p {
+  font-size:1.1em;
+  color:#555;
+}

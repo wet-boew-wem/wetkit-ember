@@ -1,0 +1,501 @@
+/* =============================================================================
+   Generic elements
+   ========================================================================== */
+
+body {
+  background: #fff image-url("spark_bg_tile.png");
+  color:#555;
+  font:normal 84%/1.6em 'Source Sans', Lucida Sans Unicode, Lucida Grande, Segoe UI, sans-serif;
+}
+a {
+  color:#2865B8;
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:none;
+  color:#1B4580;
+}
+hr {
+  background:#ddd;
+  border:none;
+  margin:0;
+  padding:0;
+  height:1px;
+}
+legend {
+  font-weight:normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin:0;
+}
+h1 {
+  font-family:'Source Sans Light';
+  font-size:1.538em;
+}
+h2 {
+  font-family:'Source Sans Light';
+  font-size:1.385em;
+}
+h3 {
+  font-weight:normal;
+  font-size:1.231em;
+}
+h4 {
+  font-weight:normal;
+  font-size:1.154em;
+}
+h5,
+h6 {
+  font-weight:bold;
+  font-size:1.077em;
+}
+p {
+  margin:0 0 20px;
+}
+dl {
+  margin:0 0 20px;
+}
+dl dd,
+dl dl {
+  margin:0 0 1em 1em; /* LTR */
+}
+blockquote {
+  margin:1em 2em;
+}
+address {
+  font-style:italic;
+}
+u,
+ins {
+  text-decoration:underline;
+}
+s,
+strike,
+del {
+  text-decoration:line-through;
+}
+big {
+  font-size:larger;
+}
+small {
+  font-size:smaller;
+}
+sub {
+  font-size:smaller;
+  line-height:normal;
+  vertical-align:sub;
+}
+sup {
+  font-size:smaller;
+  line-height:normal;
+  vertical-align:super;
+}
+nobr {
+  white-space:nowrap;
+}
+abbr,
+acronym {
+  border-bottom:dotted 1px;
+}
+abbr[title] {
+border-bottom:0px solid transparent;
+}
+ul,
+.block ul,
+.item-list ul {
+  list-style-image:none;
+  list-style-type:disc;
+  margin:0.25em 0 0.25em 1.5em; /* LTR */
+}
+.item-list .pager li {
+  padding:0.5em;
+}
+.item-list ul li,
+li.leaf,
+ul.menu li {
+  list-style-image:none;
+  list-style-type:disc;
+}
+ul.menu li {
+  margin:0;
+}
+ol {
+  list-style-type:decimal;
+  margin:0.25em 0 0.25em 2em; /* LTR */
+}
+.item-list ul li.collapsed,
+ul.menu li.collapsed {
+  list-style-image:url(../../misc/menu-collapsed.png);
+  list-style-type:disc;
+}
+.item-list ul li.expanded,
+ul.menu li.expanded {
+  list-style-image:url(../../misc/menu-expanded.png);
+  list-style-type:circle;
+}
+quote,
+code {
+  margin:0.5em 0;
+}
+code,
+pre,
+kbd {
+  font-size:84%/1.6em;
+  color:#393;
+}
+pre {
+  margin:0.5em 0;
+  white-space:pre-wrap;
+}
+
+
+/* =============================================================================
+   Skip link
+   ========================================================================== */
+
+#skip-link {
+  left: 50%; /* LTR */
+  margin-left: -5.25em; /* LTR */
+  margin-top:0;
+  position:absolute;
+  width:auto;
+  z-index: 50;
+}
+#skip-link a,
+#skip-link a:link,
+#skip-link a:visited {
+  background:#444;
+  border-radius:0 0 10px 10px;
+  color:#fff;
+  display:block;
+  font-size:0.94em;
+  padding:1px 10px 2px 10px; /* LTR */
+  text-decoration: none;
+}
+#skip-link a:hover,
+#skip-link a:focus,
+#skip-link a:active {
+  outline:0;
+}
+
+/* =============================================================================
+   Branding (includes page title, shortcut, contextual links and breadcrumb)
+   ========================================================================== */
+
+#page-title {
+  background:#ddd;
+  padding-top:20px;
+}
+#branding h1.page-title {
+  color: #555;
+  float: left; /* LTR */
+  font-size: 3em;
+  font-family:'Source Sans Light';
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 20px;
+}
+/**
+ * Shortcuts
+ */
+div.add-or-remove-shortcuts {
+  display: inline-block;
+  line-height: 38px;
+  padding-left: 20px;
+  margin:0;
+}
+.add-or-remove-shortcuts .icon {
+  background: url("shortcut.png") no-repeat scroll 0 0 transparent;
+  height: 12px;
+  margin-left: 8px;
+  overflow: hidden;
+  text-indent: 12px;
+  width: 12px;
+  display: inline-block;
+}
+div.add-or-remove-shortcuts .icon:hover {
+  display: inline-block;
+}
+/**
+ * Breadcrumb
+ */
+.breadcrumb {
+  display:inline-block;
+  line-height:38px;
+  padding-left:20px;
+}
+.breadcrumb-side {
+  display:inline-block;
+  line-height:38px;
+  padding-left:20px;
+  float: right;
+}
+/* =============================================================================
+   Console
+   ========================================================================== */
+
+#console {
+  margin: 9px 0 10px;
+}
+
+/* =============================================================================
+   Admin lists
+   ========================================================================== */
+
+div.admin {
+  padding:0;
+}
+.block .body ul {
+  margin:0;
+}
+div.admin-panel {
+  margin:0 0 2em;
+  padding:0 20px 0 0;
+}
+div.admin-panel .body {
+  padding:0;
+}
+ul.admin-list {
+  margin:0 0 2em;
+  padding:0;
+}
+.admin-panel h3 {
+  font-size:1.4em;
+  font-family:'Source Sans Light';
+  margin:0 0 15px 30px;
+  padding:0 0 5px;
+  border-bottom:1px solid #ddd;
+  text-transform:uppercase;
+}
+ul.admin-list li {
+  background:image-url("list-item.png") no-repeat scroll 0 0 transparent;
+  list-style-image:none;
+  list-style-type:none;
+  margin:0 0 1em;
+  padding:0 0 0 30px;
+}
+ul.admin-list .label {
+ color:#555;
+ font-weight:bold;
+ font-size:1.05em;
+}
+.compact-link {
+  text-align:right;
+  margin:-1em 0 0; /* pushes link up into the padding of #content so list has an even margin all around */
+}
+ul.admin-list.compact li {
+  background:none;
+  margin:0;
+}
+
+/* =============================================================================
+   Admin appearance
+   ========================================================================== */
+
+#system-themes-page h2 {
+  font-weight:normal;
+  text-transform:uppercase;
+}
+.theme-selector h3 {
+  font-weight:normal;
+}
+.theme-default h3 {
+  font-weight:bold;
+}
+.system-themes-list-enabled .theme-selector h3 {
+  margin-top:0;
+}
+
+/* =============================================================================
+   People
+   ========================================================================== */
+
+#permissions td.module {
+  background-color: #f5f5f5;
+  background-image: none;
+  font-weight: bold;
+}
+
+/* =============================================================================
+   Media queries
+   ========================================================================== */
+
+@media (max-width: 960px) {
+
+  /* dashboard */
+  div#dashboard_sidebar {
+    clear: both;
+    margin: 0;
+    width: 100% !important;
+  }
+  #dashboard div#dashboard_main {
+  clear: both;
+    margin-right: 0%;
+    width: 100%;
+  }
+  /* configuration page */
+  div.admin .right, div.admin .left {
+    margin: 0;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  body.admin-expanded {
+    margin-left: 0;
+  }
+  #toolbar .screen-reader-text {
+    display: none;
+  }
+  body.admin-expanded div#admin-toolbar {
+    width: 100%;
+  }
+  body.admin-expanded div#admin-toolbar.vertical div.admin-blocks {
+    width: 100% !important;
+  }
+  #tab-bar {
+    display: none;
+  }
+  /* form elements */
+  input.form-button-disabled,
+  input.form-button-disabled:active {
+  float: none;
+  width: 100%;
+  margin-right: 10px;
+  }
+  input.form-autocomplete,
+  input.form-text,
+  input.form-file,
+  textarea.form-textarea,
+  select.form-select {
+  min-width:100% !important;
+  max-width:100% !important; /* form-text overflows the page in chrome. should be fixed in core */
+  float: none;
+  margin-right: 10px;
+  }
+  input.form-text:focus,
+  input.form-file:focus,
+  textarea.form-textarea:focus,
+  select.form-select:focus {
+  width: 100%;
+  float: none;
+  margin-right: 10px;
+  }
+  /* dashboard */
+  #dashboard div#dashboard_main {
+  clear: both;
+    margin-right: 0%;
+    width: 100%;
+  }
+  div#dashboard_sidebar {
+    clear: both;
+    margin: 0;
+    width: 100% !important;
+  }
+  /* configuration page */
+  div.admin .right, div.admin .left {
+    margin: 0;
+    width: 100%;
+  }
+  /* appearance page */
+  .system-themes-list-enabled .theme-selector .screenshot, .system-themes-list-enabled .theme-selector .no-screenshot {
+    clear: both;
+    margin: 0 40px 20px 0;
+  }
+  .system-themes-list-disabled .theme-selector {
+    float: left;
+    padding: 0 20px 20px 0;
+    width: 300px;
+  }
+  .color-form #placeholder {
+    position:relative;
+  }
+  html.js #preview {
+    margin-left: -15px;
+  }
+  /* vertical tabs */
+  div.vertical-tabs {
+    background: image-url("fc.png") repeat-y scroll -97px 0 #FFFFFF;
+    border: 1px solid #ddd;
+  }
+  div.vertical-tabs .vertical-tabs-list {
+    width: 143px;
+  }
+  div.vertical-tabs .vertical-tabs-panes {
+    margin: 0 0 0 163px;
+  }
+
+  /* workbench */
+  div.admin.my-workbench .left,
+  div.admin.my-workbench .right {
+    float: none;
+    width: 100%;
+  }
+  div.admin.my-workbench .left {
+    margin-bottom: 20px;
+  }
+  div.admin.my-workbench .left .views-field-picture {
+    float: left;
+  }
+  div.admin.my-workbench .left .views-field-name,
+  div.admin.my-workbench .left .views-field-edit-node {
+    text-align: right;
+  }
+
+  /* Views */
+  .views-display-column {
+    float: none;
+    margin: 2em 0;
+    padding: 0;
+    width: 100%;
+  }
+  .views-display-top,
+  #edit-display-settings-top {
+    margin-bottom: 2.5em;
+  }
+  .views-display-top .ctools-button-processed,
+  #edit-display-settings-top .ctools-button-processed {
+    top: auto;
+    bottom: -15px;
+    right: 0;
+  }
+}
+
+.search-block-form {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+/* =============================================================================
+   Fade in on pageload
+   ========================================================================== */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:.3s;
+  -moz-animation-duration:.3s;
+  animation-duration:.3s;
+
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}

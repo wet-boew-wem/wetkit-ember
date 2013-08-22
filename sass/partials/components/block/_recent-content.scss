@@ -1,0 +1,14 @@
+/* =============================================================================
+   Recent content block
+   ========================================================================== */
+
+#dashboard div#block-node-recent div.content {
+  padding:0;
+}
+#block-node-recent table,
+#block-node-recent tr {
+  border:none;
+}
+#block-node-recent .more-link {
+  padding:0 5px 5px 0; /* LTR */
+}
