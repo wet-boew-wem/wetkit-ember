@@ -7,6 +7,7 @@
   padding: 9px 0;
   margin: 0 10px 10px 0;
 }
+
 .media-widget:after {
   content: ".";
   display: block;
@@ -14,10 +15,12 @@
   clear: both;
   visibility: hidden;
 }
+
 .media-widget .form-item {
   margin: 0;
   padding-bottom: 0;
 }
+
 .media-widget .preview {
   background: #CCC;
   min-height: 110px;
@@ -26,55 +29,32 @@
   border: 1px solid #CCC;
   float: left;
 }
+
 .media-widget .preview .media-item {
   margin: 0;
   border: 0;
 }
-.media-widget .button {
-  display: inline-block;
-  font-family: 'Source Sans', Lucida Sans Unicode, Lucida Grande, Segoe UI, sans-serif;
-  font-size: 1.1em;
-  color: #555;
-  background-image: -webkit-linear-gradient(-90deg,rgb(254,254,254) 0%,rgb(225,225,225) 100%);
-  background-image: -ms-linear-gradient(-90deg,rgb(254,254,254) 0%,rgb(225,225,225) 100%);
-  background-image: linear-gradient(-90deg,rgb(254,254,254) 0%,rgb(225,225,225) 100%);
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  height: 2.2em;
-  line-height: 2.2em;
-  margin-right: 0.5em;
-  padding: 0 17px;
-  text-align: center;
-}
 
-#media-browser-tabset .tabs {
-  margin-right: 10px;
+.media-widget .button {
+  display: block;
 }
 
 /* Media browser */
 #media-browser-tabset #branding {
   padding: 10px 0 0 10px;
-  height: 50px;
 }
-#media-browser-tabset #branding h1 {
-  padding: 12px 0 0 12px;
-  text-transform: uppercase;
-}
+
 #media-browser-tabset ul.tabs.primary li {
   margin-right: 0;
   margin-left: .2em;
 }
-/* Fixes Media Library select list alignment */
-#media-browser-page div.form-item {
-  margin: 0;
-}
+
 #media-browser-tabset ul.tabs.primary li a:link {
   position: relative;
   top: 1px;
   font-size: 1.2em;
   font-weight: normal;
-  padding: 0em 1em;
+  padding: .5em 1em;
   margin: 0;
   background: rgba(0, 0, 0, 0.06);
   border: 0px solid rgba(0, 0, 0, 0);
@@ -82,20 +62,22 @@
   vertical-align: text-bottom;
   border-radius: 0;
 }
+
 #media-browser-tabset ul.tabs.primary li.ui-state-active a {
   background: #FFF;
   border: 1px solid #DDD;
   border-bottom: 1px solid #FFF;
   color: #555;
 }
+
 #media-browser-page .button {
   margin: 1em .5em 1em 0;
   min-width: 80px;
   font-size: 1.1em;
   color: #555;
-  background-image: -webkit-linear-gradient(-90deg,#FEFEFE 0%,#E1E1E1 100%);
-  background-image: -ms-linear-gradient(-90deg,#FEFEFE 0%,#E1E1E1 100%);
-  background-image: linear-gradient(-90deg,#FEFEFE 0%,#E1E1E1 100%);
+  background-image: -webkit-linear-gradient(-90deg, #fefefe 0%, #e1e1e1 100%);
+  background-image: -ms-linear-gradient(-90deg, #fefefe 0%, #e1e1e1 100%);
+  background-image: linear-gradient(-90deg, #fefefe 0%, #e1e1e1 100%);
   border: 1px solid #DDD;
   border-radius: 4px;
   cursor: pointer;
