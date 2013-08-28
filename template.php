@@ -49,8 +49,6 @@ function wetkit_ember_preprocess_page(&$vars) {
   }
 
   if (module_exists('wetkit_language')) {
-    //$language_link_markup = '<li id="' . $theme_prefix . '-gcnb-lang">' . strip_tags($vars['menu_lang_bar'], '<a><span>') . '</li>';
-    //$vars['lang_bar'] = '<div class="breadcrumb-site"><span class="links secondary-menu">' . $language_link_markup . '</span></div>';
     $vars['lang_bar'] = '<div class="breadcrumb-side"><ul><li>' . $vars['menu_lang_bar'] . '</li></ul></div>';
   }
 }
@@ -122,10 +120,10 @@ function wetkit_ember_tablesort_indicator($variables) {
 function wetkit_ember_css_alter(&$css) {
   // Use ember's vertical tabs style instead of the default one.
   if (isset($css['misc/vertical-tabs.css'])) {
-    $css['misc/vertical-tabs.css']['data'] = drupal_get_path('theme', 'wetkit_ember') . '/css/wetkit_ember.vertical-tabs.css';
+    $css['misc/vertical-tabs.css']['data'] = drupal_get_path('theme', 'wetkit_ember') . '/css/vertical-tabs.css';
   }
   if (isset($css['misc/vertical-tabs-rtl.css'])) {
-    $css['misc/vertical-tabs-rtl.css']['data'] = drupal_get_path('theme', 'wetkit_ember') . '/css/wetkit_ember.vertical-tabs-rtl.css';
+    $css['misc/vertical-tabs-rtl.css']['data'] = drupal_get_path('theme', 'wetkit_ember') . '/css/vertical-tabs-rtl.css';
   }
   // Use ember's jQuery UI theme style instead of the default one.
   if (isset($css['misc/ui/jquery.ui.theme.css'])) {
