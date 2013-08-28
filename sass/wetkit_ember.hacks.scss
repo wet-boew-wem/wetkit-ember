@@ -1,13 +1,70 @@
-// Hide the toolbar or admin menu on small screens.
-@media all and (max-width: 800px) {
-  #toolbar, #admin-menu {
-    display: none;
-  }
-
-  html {
-    body.toolbar, body.admin-menu {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
+.breadcrumb-side {
+  float: right;
+  margin-top: 15px;
+  ul {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+    li {
+      list-style-type: none;
+    }
+    a {
+      font-size: 1.2em;
+      color: white;
+      padding: .5em 0;
+      margin: 0 1em 0 .1em;
+    }
+    a:hover {
+      border-bottom: 4px solid #ffffff;
+      text-decoration: none;
     }
   }
+}
+
+.add-or-remove-shortcuts {
+  display: none;
+}
+
+.breadcrumb {
+  span {
+    font-size: 1.1em;
+    a {
+      color: black;
+    }
+  }
+}
+
+ul.primary {
+  float: left;
+  li {
+    a:hover {
+      border-color: #ffffff;
+    }
+    &.active {
+      a {
+        border-color: #008fdc;
+      }
+      a:hover {
+        border-bottom: 4px solid #ffffff;
+      }
+    }
+  }
+}
+
+#tab-bar {
+  margin-bottom: 15px;
+}
+
+.form-wrapper,
+.container-inline {
+  margin-bottom: 2em;
+}
+
+.form-wrapper .fieldset-wrapper
+.container-inline .fieldset-wrapper {
+  padding: 2em 2em 0em 2em;
+}
+
+#branding h1.page-title {
+  margin-top: 0.25em;
 }

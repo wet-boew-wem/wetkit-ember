@@ -1,10 +1,64 @@
-@media all and (max-width: 800px) {
-  #toolbar, #admin-menu {
-    display: none;
-  }
+.breadcrumb-side {
+  float: right;
+  margin-top: 15px;
+}
+.breadcrumb-side ul {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+.breadcrumb-side ul li {
+  list-style-type: none;
+}
+.breadcrumb-side ul a {
+  font-size: 1.2em;
+  color: white;
+  padding: .5em 0;
+  margin: 0 1em 0 .1em;
+}
+.breadcrumb-side ul a:hover {
+  border-bottom: 4px solid #ffffff;
+  text-decoration: none;
+}
 
-  html body.toolbar, html body.admin-menu {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
+.add-or-remove-shortcuts {
+  display: none;
+}
+
+.breadcrumb span {
+  font-size: 1.1em;
+}
+.breadcrumb span a {
+  color: black;
+}
+
+ul.primary {
+  float: left;
+}
+ul.primary li a:hover {
+  border-color: #ffffff;
+}
+ul.primary li.active a {
+  border-color: #008fdc;
+}
+ul.primary li.active a:hover {
+  border-bottom: 4px solid #ffffff;
+}
+
+#tab-bar {
+  margin-bottom: 15px;
+}
+
+.form-wrapper,
+.container-inline {
+  margin-bottom: 2em;
+}
+
+.form-wrapper .fieldset-wrapper
+.container-inline .fieldset-wrapper {
+  padding: 2em 2em 0em 2em;
+}
+
+#branding h1.page-title {
+  margin-top: 0.25em;
 }

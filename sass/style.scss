@@ -1,0 +1,1717 @@
+// Import the common includes for all files.
+@import "base";
+
+/* =============================================================================
+   Generic elements
+   ========================================================================== */
+@include styleguide-reset;
+
+#edit-submit {
+  @extend %button-primary;
+}
+
+body {
+  background: $color-background image-url("spark_bg_tile.png");
+}
+
+/* =============================================================================
+   Skip link
+   ========================================================================== */
+
+#skip-link {
+  left: 50%; /* LTR */
+  margin-left: -5.25em; /* LTR */
+  margin-top:0;
+  position:absolute;
+  width:auto;
+  z-index: 50;
+}
+#skip-link a,
+#skip-link a:link,
+#skip-link a:visited {
+  background:#444;
+  border-radius:0 0 10px 10px;
+  color: $color-text-light;
+  display:block;
+  font-size:0.94em;
+  padding:1px 10px 2px 10px; /* LTR */
+  text-decoration: none;
+}
+#skip-link a:hover,
+#skip-link a:focus,
+#skip-link a:active {
+  outline:0;
+}
+
+/* =============================================================================
+   Help
+   ========================================================================== */
+
+#help {
+  margin:1em 0;
+  line-height:1.6em;
+}
+.region .region-help ul {
+  margin:0 0 20px 0;
+}
+#help div.more-help-link {
+  text-align: right; /* LTR */
+}
+.region-help {
+  margin-bottom:1em;
+}
+.region-help p {
+  font-size:1.1em;
+  color:#555;
+}
+
+/* =============================================================================
+   Branding (includes page title, shortcut, contextual links and breadcrumb)
+   ========================================================================== */
+
+#branding {
+  @include box-sizing(border-box);
+  background-color: $color-background-dark;
+  padding: 1em $inset-space 0;
+  // position: fixed;
+  width: 100%;
+  // z-index: 100;
+  color: $color-text-light;
+}
+#branding h1.page-title {
+  margin-top: 0;
+  font-size: 2.75em;
+  font-weight: 200;
+}
+/**
+ * Shortcuts
+ */
+div.add-or-remove-shortcuts {
+  float: right;
+}
+.add-or-remove-shortcuts .icon {
+  background: url("shortcut.png") no-repeat scroll 0 0 transparent;
+}
+div.add-or-remove-shortcuts .icon:hover {
+}
+
+/* =============================================================================
+   Action links
+   ========================================================================== */
+
+ul.action-links {
+  margin: 0;
+}
+.action-links li {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 120%;
+  color: $color-text;
+  font-weight: 900;
+}
+.action-links li a:hover  {
+  text-decoration: none;
+}
+.action-links li:before {
+  content: "+ ";
+  font-size: 200%;
+  color: $color-link;
+}
+
+/* =============================================================================
+   Tabs
+   ========================================================================== */
+.tabs.primary {
+  margin: 1em 0 0;
+  padding: 0 ;
+}
+ul.primary {
+  border:0 solid transparent;
+  padding:0;
+  line-height:2.09em;
+  background: none;
+}
+ul.primary li a {
+  font-size:1.2em;
+  padding: .5em 0;
+  margin: 0 1em 0 .1em; /* LTR */
+  border:0px solid transparent;
+  color: $color-text-light;
+  vertical-align:text-bottom;
+  background: none;
+}
+ul.primary li.active a {
+  border-top:0px solid transparent;
+  border-right:0px solid transparent;
+  border-bottom:4px solid;
+  border-color: $color-link-alternate;
+  border-left:0px solid transparent;
+  background: none;
+}
+ul.primary li a.active:hover {
+  border-bottom: 4px;
+  border-color: $color-link-alternate;
+}
+ul.primary li a:hover {
+  background: none;
+  border-bottom: 4px solid;
+  border-color: $color-link-alternate;
+}
+ul.secondary {
+  margin:0 -3.5em;
+  padding:.5em 3.5em;
+  background-color: #777;
+  box-shadow: 0px 10px 20px #f5f5f5;
+}
+ul.secondary li {
+  border:0 solid transparent;
+  margin: 0 1em 0 .1em; /* LTR */
+  padding:0;
+  font-weight: bold;
+}
+ul.secondary li a {
+  font-size:.9em;
+  line-height:20px;
+  color:#CCC;
+  padding:0;
+}
+.secondary a:hover {
+  color: $color-text-light;
+}
+ul.secondary a.active {
+  border:0 solid transparent;
+  color: $color-text-light;
+}
+
+/* =============================================================================
+   Console
+   ========================================================================== */
+
+#console {
+  margin: 9px 0 10px;
+}
+
+/* =============================================================================
+   Page
+   ========================================================================== */
+
+#content {
+  clear:left;
+}
+#page {
+  margin: 1em $inset-space 0;
+  position:relative;
+}
+
+/* =============================================================================
+   Secondary links
+   ========================================================================== */
+   
+#secondary-links ul.links li {
+  padding:0 10px 10px 0; /* LTR */
+}
+#secondary-links ul.links li a {
+  font-size:0.923em;
+  color: $color-text-light;
+  text-align:center;
+  padding:5px;
+  overflow:hidden;
+}
+#secondary-links ul.links li a:hover {
+}
+ul.links li,
+ul.inline li {
+  padding-right:1em; /* LTR */
+}
+ul.inline li {
+  display:inline;
+}
+#secondary-links ul.links li.active-trail a,
+#secondary-links ul.links li a.active {
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+tr,
+td,
+tr.odd,
+tr.even {
+  background-color:transparent;
+}
+tr.drag {
+  background-color: $color-dragging;
+}
+a.tabledrag-handle .handle  {
+  background: url(../images/drag-handle.png) no-repeat 6px 8px;
+  height: 20px;
+  margin: -0.4em 0.5em; /* LTR */
+  padding: 0.42em 0.5em; /* LTR */
+  width: 13px;
+}
+tr.drag-previous {
+  background-color: $color-dragging;
+}
+tr.region-title  {
+  background-color:transparent;
+  border:0px solid transparent;
+}
+table th.active img {
+  position:absolute;
+  top: 3px;
+  right: 3px; /* LTR */
+}
+table td.active {
+  background-color: $color-background;
+}
+table tr.selected td.active,
+table tr.selected td {
+  background: $color-background-alternate;
+}
+table td ul.inline {
+  margin: 0;
+}
+table.system-status-report tr {
+  border-bottom:1px solid #ddd;
+}
+table.system-status-report tr.ok {
+  background-color: transparent;
+  color: $color-success;
+}
+table.system-status-report tr.info {
+  background-color: transparent;
+  color: $color-highlight;
+}
+table.system-status-report tr.warning {
+  background-color: transparent;
+  color: $color-warning;
+}
+table.system-status-report tr.error {
+  background-color: transparent;
+  color: $color-error;
+}
+table.sticky-header {
+  z-index: 2;
+}
+#system-modules label {
+  font-weight:normal;
+}
+#system-modules .expand .inner {
+  outline:0px solid transparent;
+}
+tr.odd .form-item,
+tr.even .form-item,
+tr.odd .form-actions,
+tr.even .form-actions {
+  margin:0;
+  padding:0;
+  white-space:nowrap;
+}
+.tabledrag-changed:after {
+  content:" previewing, save blocks to confirm";
+  color: $color-warning;
+}
+/**
+ * Exception for webkit bug with the right border of the last cell
+ * in some tables, since it's webkit only, we can use :last-child
+*/
+tr td:last-child {
+  border-right:none; /* LTR */
+}
+
+/* =============================================================================
+   Form elements
+   ========================================================================== */
+
+/* Exceptions */
+#diff-inline-form select,
+div.filter-options select {
+  padding:0;
+}
+.form-item.form-type-select.form-item-operation {
+float: left;
+}
+textarea {
+  height: 200px;
+}
+
+/* =============================================================================
+   Filter
+   ========================================================================== */
+
+.filter-wrapper {
+  border-top: 0;
+  padding: 10px 2px;
+}
+.filter-wrapper .fieldset-wrapper {
+  padding: 0px;
+}
+.filter-wrapper .form-item,
+.filter-wrapper .filter-guidelines,
+.filter-wrapper .filter-help {
+  font-size: 0.923em;
+  padding: 2px 10px 0; /* LTR */
+}
+ul.tips,
+div.description,
+.form-item div.description {
+  font-size:0.923em;
+  line-height:1.231em;
+  margin:5px 0;
+}
+ul.tips li {
+  margin:0.25em 0 0.25em 1.5em; /* LTR */
+}
+body div.form-type-radio div.description,
+body div.form-type-checkbox div.description {
+  margin-left: 1.5em; /* LTR */
+}
+
+/* =============================================================================
+   Dropbutton
+   ========================================================================== */
+
+.js .dropbutton-widget {
+  background:#f5f5f5;
+  border:0px solid transparent;
+  border-radius:4px;
+  -moz-box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+  box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+}
+.dropbutton-widget .dropbutton {
+  line-height:1.8em;
+}
+.js .dropbutton-widget a {
+  color:#555;
+}
+.js .dropbutton-widget a:hover {
+  color:#000;
+}
+.dropbutton-multiple .dropbutton {
+  border-right:1px solid #ddd;
+}
+.dropbutton-toggle button {
+  background:none;
+}
+.dropbutton .secondary-action {
+  border-top:1px solid #ddd;
+}
+tr.selected > .dropbutton-widget {
+  background: $color-background;
+}
+
+/* =============================================================================
+   Exposed filter
+   ========================================================================== */
+
+.exposed-filters .form-item {
+  float: left; /* LTR */
+  line-height:3.2em;
+  margin-right: 10px;
+}
+.exposed-filters .form-item label {
+  float: left; /* LTR */
+  font-weight: normal;
+  margin-right: 0.25em;
+  width: inherit;
+  padding: 0 5px 0 0;
+}
+.exposed-filters .filters {
+  float:none;
+  margin-right:0;
+  width:100%;
+}
+.exposed-filters .current-filters ul, .exposed-filters .block ul, .exposed-filters .item-list ul {
+  margin: 0;
+}
+div.exposed-filters div#edit-actions {
+  float:none;
+}
+div.exposed-filters div#edit-actions input.form-submit, div#edit-actions a.button {
+  margin: inherit;
+  width:auto;
+}
+div.exposed-filters .container-inline .form-actions, .container-inline.form-actions {
+  margin:0;
+}
+.exposed-filters .additional-filters {
+  padding:5px 0 0 0;
+  margin-right: 0.2em;
+}
+.exposed-filters .form-select {
+  margin:.5em 0 1em;
+}
+.exposed-filters .form-item label { /*forces inlline form element labels to align center vertically to the form element*/
+  font-size:1em;
+  line-height:3.2em;
+}
+.container-inline  {
+  border:none;
+}
+.container-inline div, .container-inline label {
+  margin:0 5px 0 0;
+}
+fieldset {
+  border: 0px solid transparent;
+  margin: 0em;
+  padding: 0em;
+}
+summary:focus {
+  outline:0px solid transparent; /*hides browser focus border on this element since it contains no user action. Should not effect a11y.*/
+}
+summary {
+  background:url("../../misc/menu-expanded.png") no-repeat scroll 0 100% #eee;
+  height:2em;
+  border:0px solid transparent;
+  padding:0 10px;;
+  background:#f5f5f5;
+  border-radius:4px 4px 0 0;
+  line-height:2em;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.collapse-processed > summary:before {
+  background-position:0 70%;
+  height: 1.6em;
+  width: 1em;
+}
+.collapse-processed > summary {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+details {
+  border:0px solid transparent;
+}
+details > .details-wrapper,
+.container-inline .details-wrapper {
+  padding:10px;
+  border:solid #eee;
+  border-width:0px 1px 1px 1px;
+  margin:0 0 1em;
+}
+.machine-name-label {
+  margin-left:10px;
+}
+
+/* =============================================================================
+   Admin lists
+   ========================================================================== */
+
+div.admin {
+  padding:0;
+}
+.block .body ul {
+  margin:0;
+}
+div.admin-panel {
+  margin:0 0 2em;
+  padding:0 20px 0 0;
+}
+div.admin-panel .body {
+  padding:0;
+}
+ul.admin-list {
+  margin:0 0 2em;
+  padding:0;
+}
+.admin-panel h3 {
+  font-size:1.4em;
+  margin:0 0 15px 30px;
+  padding:0 0 5px;
+  border-bottom:1px solid #ddd;
+  text-transform:uppercase;
+  color: #555;
+  font-weight: normal;
+}
+ul.admin-list li {
+  background:image-url("list-item.png") no-repeat scroll 0 0 transparent;
+  list-style-image:none;
+  list-style-type:none;
+  margin:0 0 1em;
+  padding:0 0 0 2.5em;
+}
+ul.admin-list li a {
+  font-size: 110%;
+  font-weight: 500;
+}
+ul.admin-list .label {
+ color:#555;
+ font-size:1.05em;
+}
+.compact-link {
+  text-align:right;
+  margin:-1em 0 0; /* pushes link up into the padding of #content so list has an even margin all around */
+}
+ul.admin-list.compact li {
+  background:none;
+  margin:0;
+}
+
+/* =============================================================================
+   Admin appearance
+   ========================================================================== */
+
+.theme-default .screenshot,
+.theme-selector .screenshot {
+    border:2px solid #999;
+    padding: 0px;
+}
+
+/* =============================================================================
+   Update status
+   ========================================================================== */
+
+.versions table.version {
+  border:none;
+}
+
+/* =============================================================================
+   Maintenance page
+   ========================================================================== */
+
+body.in-maintenance #sidebar-first {
+  float:left; /* LTR */
+  width:200px;
+}
+body.in-maintenance #content {
+  clear:none;
+  float:right; /* LTR */
+  padding-right: 20px; /* LTR */
+  width: 550px;
+}
+body.in-maintenance #page {
+  margin:0 auto;
+  overflow:auto;
+  padding-top:2em;
+  width:770px;
+}
+body.in-maintenance #branding h1 {
+  float:none;
+  margin:0 auto;
+  width:770px;
+}
+body.in-maintenance .form-radios .form-type-radio {
+  padding:2px 0;
+}
+body.in-maintenance div.form-item:after {
+  clear:none;
+  content:"";
+  display:none;
+}
+body.in-maintenance .form-submit {
+  display:block;
+}
+body.in-maintenance #logo {
+  margin-bottom:1.5em;
+}
+ol.task-list {
+  list-style-type:none;
+  list-style-image:none;
+  margin-left:0; /* LTR */
+}
+ol.task-list li {
+  color:#adadad;
+  padding:0.5em 1em 0.5em 20px; /* LTR */
+}
+ol.task-list li.active {
+  background:transparent image-url("task-item.png") no-repeat 3px 50%; /* LTR */
+  color:#000;
+  padding:0.5em 1em 0.5em 20px; /* LTR */
+}
+ol.task-list li.done {
+  background:transparent image-url("task-check.png") no-repeat 0 50%;
+  color:green;
+}
+
+/* =============================================================================
+   Fieldset
+   ========================================================================== */
+  
+fieldset {
+  margin: 1em 0;
+} 
+legend  {
+  padding: 0;
+}
+.fieldset-legend  {
+  font-size: 180%;
+  font-weight: 200;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+.fieldset-wrapper .form-select {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+/* =============================================================================
+   Overlay
+   ========================================================================== */
+div#overlay {
+  min-width:200px;
+  max-width:800px;
+}
+#overlay-content {
+  padding:0;
+}
+.overlay #branding {
+  background-color: $color-background-dark;
+  padding:20px 20px 0px;
+  border-bottom:1px solid #ddd;
+}
+#overlay-titlebar,
+.overlay .breadcrumb,
+.overlay .region-help,
+.overlay #left,
+.overlay #footer {
+  display:none;
+}
+.overlay #content {
+  padding:0;
+  margin:0;
+  border:0 solid transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.overlay .content,
+.overlay .actions {
+  padding:20px 20px 0;
+}
+.overlay #page {
+  margin:0;
+  padding:0;
+}
+.overlay #content {
+  padding: 0;
+}
+
+/* =============================================================================
+   Toolbar
+   ========================================================================== */
+
+
+
+/* =============================================================================
+   Dashboard
+   ========================================================================== */
+
+#dashboard .region {
+  margin:0;
+}
+#dashboard div.block h2 {
+  font-size:1em;
+  margin:0;
+  padding:3px 10px;
+}
+#dashboard div.block div.content {
+  padding:10px 10px 20px; /* LTR */
+}
+#dashboard div.block div.content ul.menu {
+  margin-left:20px; /* LTR */
+}
+#dashboard .dashboard-region .block {
+  border:1px solid #ddd;
+}
+#dashboard div#dashboard_main {
+  margin-right:1.5%;
+  width:48%;
+}
+#dashboard div#dashboard_sidebar {
+  width:48%;
+}
+#dashboard .canvas-content a.button {
+  color: $color-text-light;
+  margin:10px 0 0;
+  text-decoration: none;
+}
+#dashboard .ui-sortable {
+  border:2px dotted #ccc;
+  padding:10px 10px 0;
+}
+#dashboard #disabled-blocks .region {
+  background-color:transparent;
+  border:none;
+  padding:0;
+}
+#dashboard #disabled-blocks .block {
+  background-color:#666;
+}
+#dashboard #disabled-blocks .block, #dashboard .block-placeholder {
+  background-color:#666;
+  border-radius:4px;
+  float:left;
+  margin:3px 6px 3px 0;
+  padding:5px 4px 5px 8px;
+}
+
+/* =============================================================================
+   Content types (field UI)
+   ========================================================================== */
+
+#field-display-overview input.field-formatter-settings-edit {
+  margin:0;
+  padding:1px 8px;
+}
+#field-display-overview tr.field-formatter-settings-changed {
+  background:#ffb;
+}
+#field-display-overview tr.drag {
+  background:#fe7;
+}
+#field-display-overview tr.field-formatter-settings-editing {
+  background:#D5E9F2;
+}
+#field-display-overview .field-formatter-settings-edit-form .form-item {
+  margin:10px 0;
+}
+#field-display-overview .field-formatter-settings-edit-form .form-submit {
+  margin-bottom:0;
+}
+
+/* =============================================================================
+   Recent content block
+   ========================================================================== */
+
+#dashboard div#block-node-recent div.content {
+  padding:0;
+}
+#block-node-recent table,
+#block-node-recent tr {
+  border:none;
+}
+#block-node-recent .more-link {
+  padding:0 5px 5px 0; /* LTR */
+}
+
+/* =============================================================================
+   User login block
+   ========================================================================== */
+
+#user-login-form .openid-links {
+  margin-left:0; /* LTR */
+}
+#user-login-form .openid-links .user-link {
+  margin-left:1.5em; /* LTR */
+}
+
+/* Disable overlay message */
+#overlay-disable-message {
+  background-color:#addafc;
+}
+#overlay-disable-message a,
+#overlay-disable-message a:visited {
+  color:#000;
+}
+#overlay-disable-message a:focus,
+#overlay-disable-message a:active {
+  outline: none;
+  text-decoration:underline;
+}
+.overlay-disable-message-focused a {
+  padding:0.4em 0.6em;
+}
+.overlay-disable-message-focused #overlay-dismiss-message {
+  background-color:#59a0d8;
+  border-radius:8px;
+  color: $color-text-light;
+}
+
+/* =============================================================================
+   Appearance
+   ========================================================================== */
+
+.system-themes-list h2 {
+  font-size: $font-size-small;
+}
+
+/* =============================================================================
+   Ctools
+   ========================================================================== */
+
+#ctools-export-ui-list-form .form-submit {
+  margin-top:2em !important;
+}
+.ctools-button-processed {
+  background-color: $color-background;;
+  border: 1px solid #ddd;
+  font-size: inherit;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.ctools-button-processed li {
+  line-height: 1em;
+  background-color: $color-background;
+  border: 0px solid transparent;
+}
+.ctools-content ul.actions .right {
+  background-color: $color-background;
+}
+
+/* =============================================================================
+   Media
+   ========================================================================== */
+
+/* Field widget */
+.media-widget {
+  padding: 9px 0;
+  margin: 0 10px 10px 0;
+}
+.media-widget:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.media-widget .form-item {
+  margin: 0;
+  padding-bottom: 0;
+}
+.media-widget .preview {
+  background: #CCC;
+  min-height: 110px;
+  min-width: 110px;
+  margin-right: 10px;
+  border: 1px solid #CCC;
+  float: left;
+}
+.media-widget .preview .media-item {
+  margin: 0;
+  border: 0;
+}
+.media-widget .button {
+  display: block;
+}
+
+/* Media browser */
+#media-browser-tabset #branding {
+  padding: 10px 0 0 10px;
+}
+#media-browser-tabset ul.tabs.primary li {
+  margin-right: 0;
+  margin-left: .2em;
+}
+#media-browser-tabset ul.tabs.primary li a:link {
+  position: relative;
+  top: 1px;
+  font-size: 1.2em;
+  font-weight: normal;
+  padding: .5em 1em;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.06);
+  border: 0px solid rgba(0, 0, 0, 0);
+  color: #555;
+  vertical-align: text-bottom;
+  border-radius: 0;
+}
+#media-browser-tabset ul.tabs.primary li.ui-state-active a {
+  background: transparent;
+  border: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  color: $color-background-dark;
+}
+#media-browser-page .button {
+  margin: 1em .5em 1em 0;
+  min-width: 80px;
+  font-size: 1.1em;
+  color: $color-background-dark;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 2.2em;
+  margin-right: 0.5em;
+  padding: 6px 17px;
+  text-align: center;
+}
+
+/* =============================================================================
+   Panels
+   ========================================================================== */
+
+.dashboard-content {
+  padding:0;
+}
+.dashboard-entry .dashboard-link {
+  font-size:120%;
+  font-weight:normal;
+}
+.ctools-button-processed {
+  border:0;
+}
+.dashboard-block {
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+.panels-dashboard .links {
+  margin-top:5px;
+}
+div.dashboard-block { /* panels dashboard, not dashboard */
+  padding: 1px 10px 10px;
+  background: $color-background;
+  border:1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* =============================================================================
+   People
+   ========================================================================== */
+
+#permissions td.module {
+  background-color: #f5f5f5;
+  background-image: none;
+  font-weight: bold;
+}
+
+/* =============================================================================
+   Vertical tabs
+   ========================================================================== */
+
+div.vertical-tabs fieldset {
+    box-shadow: none;
+}
+.vertical-tabs:focus,
+ul.vertical-tabs-list:focus,
+li.selected:focus {
+  outline:0px solid transparent;
+}
+.vertical-tabs details > .details-wrapper {
+  border:1px solid transparent;
+  padding:10px 20px;
+}
+.vertical-tabs-pane div.form-item {
+  display:block;
+}
+div.vertical-tabs ul li.vertical-tab-button a:hover,
+div.vertical-tabs ul li.vertical-tab-button a:focus {
+  background: #e9e9e9;
+  outline:0px solid transparent;
+}
+
+/* =============================================================================
+   Views
+   ========================================================================== */
+   
+.views-admin ul,
+.views-admin menu,
+.views-admin dir {
+  padding: 0;
+}
+.views-admin pre {
+  margin-bottom: inherit;
+  margin-top: inherit;
+  white-space: inherit;
+}
+.views-group-box .form-item {
+  margin-left: inherit;
+  margin-right: inherit;
+}
+ .views-displays .secondary {
+   border-bottom: 0 none;
+   margin: 0;
+   overflow: visible;
+   padding: 0;
+ }
+.views-displays .secondary > li {
+  border-right: 0 none;
+  padding: 0;
+}
+.views-displays .secondary .action-list {
+  top: inherit;
+}
+.views-display-tab .fieldset-legend {
+  left: 0;
+}
+.views-display-tab .fieldset-wrapper > .views-ui-display-tab-bucket .actions {
+  right: 0;
+  top: 0;
+}
+.views-display-columns > * {
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 1em;
+}
+.views-display-columns > *:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.views-ui-dialog .ui-dialog-titlebar-close {
+  border: 0px solid transparent;
+  top: 0;
+}
+.box-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.box-margin {
+  margin: 0;
+}
+.views-admin .icon,
+.views-admin .icon-text {
+  background-attachment: scroll;
+  background-image: url("../images/sprites.png");
+  background-position: left top; /* LTR */
+  background-repeat: no-repeat;
+}
+.views-admin a.icon {
+  background-image:
+    url("../images/sprites.png"),
+    -moz-linear-gradient(
+      -90deg,
+      transparent 0px,
+      transparent 100%);
+  background-image:
+    url("../images/sprites.png"),
+    -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.0, rgba(255, 255, 255, 0)),
+      color-stop(1.0, rgba(232, 232, 232, 0))
+    );
+  background-image:
+    url("../images/sprites.png"),
+    -webkit-linear-gradient(
+      -90deg,
+      transparent 0px,
+      transparent 100%);
+  background-repeat: no-repeat, repeat-y;
+  border: 0px solid transparent;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 0 rgba(0,0,0,0) inset;
+  -webkit-box-shadow: 0 0 0 rgba(0,0,0,0) inset;
+  box-shadow: 0 0 0 rgba(0,0,0,0) inset;
+}
+.views-admin a.icon:hover {
+  border-color: transparent;
+  -moz-box-shadow: 0 0 1px rgba(0,0,0,0) inset;
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0,0) inset;
+  box-shadow: 0 0 1px rgba(0,0,0,0) inset;
+}
+.views-admin a.icon:active {
+  border-color: transparent;
+}
+.views-admin .icon-text {
+  padding-left: 0;
+}
+.views-admin .icon.linked {
+  background-position: center -153px;
+}
+.views-admin .icon.unlinked {
+  background-position: center -195px;
+}
+.views-admin .icon.add {
+  background-position: center 0;
+}
+.views-admin a.icon.add {
+  background-position: center 0, left top;
+}
+.views-admin .icon.delete {
+  background-position: center -52px;
+}
+.views-admin a.icon.delete {
+  background-position: center -52px, left top;
+}
+.views-admin .icon.rearrange {
+  background-position: center -111px;
+}
+.views-admin a.icon.rearrange {
+  background-position: center -111px, left top;
+}
+.views-displays .secondary a:hover > .icon.add {
+  background-position: center -25px;
+}
+.views-displays .secondary .open a:hover > .icon.add {
+  background-position: center 3px;
+}
+.form-item {
+  margin-top: 0;
+}
+.form-type-checkbox {
+  margin-top: 0;
+}
+.form-submit:not(.js-hide) + .form-submit,
+.views-admin a.button:not(.js-hide) + a.button {
+  margin-left: 0;
+}
+.container-inline {
+  padding-top: 0;
+}
+.views-admin fieldset fieldset.container-inline {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+.views-admin fieldset fieldset.container-inline > .fieldset-wrapper {
+  padding-bottom: 0;
+}
+.views-admin .form-type-checkbox + .form-wrapper {
+  margin-left: 0;
+}
+.views-admin .form-type-checkbox label,
+.views-admin .form-type-radio label {
+  line-height: inherit;
+}
+.views-admin-dependent .form-item {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.horizontal > * + * {
+  margin-left: 0;
+  padding-left: 0;
+}
+.views-ui-view-title {
+  font-weight: inherit;
+}
+.view-changed {
+  margin-bottom: 0;
+}
+.views-admin h1.unit-title {
+  font-size: 2.5em;
+  line-height: normal;
+  margin-top: 0em;
+}
+.form-item-description-enable label {
+  font-weight: inherit;
+}
+.form-item-page-create,
+.form-item-block-create {
+  margin-top: inherit;
+}
+.form-item-page-create label,
+.form-item-block-create label {
+  font-weight: inherit;
+}
+.views-attachment .options-set label {
+  font-weight: inherit;
+}
+td.group-title {
+  font-weight: inherit;
+}
+.views-ui-dialog td.group-title span {
+  height: inherit;
+}
+.views-operator-label {
+  font-weight: 500;
+}
+.grouped-description,
+.exposed-description {
+  padding-top: 0;
+  padding-right: 0;
+}
+.views-displays {
+  border: 0px solid transparent;
+  padding-bottom: 0;
+}
+.views-display-top {
+  background-color: transparent;
+  border: 0px solid transparent;
+  padding: 0 0 1em;
+}
+.views-display-top .ctools-button-processed {
+  font-size: 1em;
+}
+.views-display-top .secondary {
+  margin-right: 0;
+}
+.views-display-top .secondary > li {
+  margin-right: 1em;
+}
+#views-display-extra-actions li {
+  padding: 0;
+}
+ul#views-display-menu-tabs li {
+  padding: .25em .5em;
+  margin: 0 .25em 0 0;
+  color: $color-text;
+  text-shadow: none;
+  background-color: $color-background-medium;
+  border-radius: 3px;
+}
+.views-displays .secondary a {
+  border: 0px solid transparent;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: $color-text-light;
+}
+.views-displays ul.secondary li.active a.active.error,
+.views-displays .secondary a.error {
+  border: 1px solid $color-error;
+  padding: 0px;
+}
+.views-displays .secondary a:hover,
+.views-displays .secondary .active a {
+  background-color: inherit;
+  color: $color-text;
+  border: 0px solid transparent;;
+}
+.views-displays .secondary .open > a {
+  background-color: inherit;
+  border: 0px solid transparent;
+}
+.views-displays .secondary .open > a:hover {
+  background-color: inherit;
+}
+.views-displays .secondary .action-list  li {
+  background-color: inherit;
+  border: 0px solid transparent;
+  padding: 0px;
+}
+#edit-display-settings-title {
+  font-size: 14px;
+  line-height: inherit;
+  margin: 0;
+}
+#edit-display-settings-top {
+  padding-bottom: 0px;
+}
+#edit-display-settings-content {
+  margin-top: 0px;
+}
+#edit-display-settings-main {
+  margin-top: 0px;
+}
+.views-display-column + .views-display-column {
+   margin-top: 0;
+ }
+#views-ui-preview-form .form-type-checkbox {
+  margin-top: 0px;
+  margin-left: 0px;
+  float: none;
+}
+#views-ui-preview-form .form-type-textfield {
+  margin-top: 0;
+  display:inline-block;
+}
+#views-ui-preview-form .arguments-preview {
+  font-size: inherit;
+}
+#views-ui-preview-form .arguments-preview,
+#views-ui-preview-form .form-type-textfield {
+  margin-left: 0px;
+}
+#views-ui-preview-form .form-type-textfield label {
+  float: none;
+  font-weight: normal;
+  height: inherit;
+  margin-right: 0;
+}
+.views-ui-display-tab-bucket {
+  border: 0px solid transparent;
+  line-height: inherit;
+  padding-top: 0px;
+}
+.views-ui-display-tab-bucket + .views-ui-display-tab-bucket {
+  border-top: 0px solid transparent;
+}
+.views-ui-display-tab-bucket > h3,
+.views-ui-display-tab-bucket > .views-display-setting {
+  padding: inherit;
+}
+.views-ui-display-tab-bucket h3 {
+  font-size: inherit;
+  margin: .5em 0;
+  font-weight: 900;
+  border-top: 1px solid #ddd;
+  padding: .5em 0 0;
+}
+.views-ui-display-tab-bucket .horizontal.actions {
+  margin-right: 0px;
+}
+.views-ui-display-tab-bucket .actions.horizontal li + li {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.views-ui-display-tab-bucket.access {
+  padding-top: 0;
+}
+.views-ui-display-tab-bucket.page-settings {
+  border-bottom: medium none;
+}
+.views-display-setting .views-ajax-link {
+  margin-left: 0em;
+  margin-right: 0em;
+}
+.views-ui-display-tab-bucket .views-display-setting {
+  color: inherit;
+  font-size: inherit;
+  padding-bottom: 0px;
+}
+.views-ui-display-tab-bucket .even {
+  background-color: transparent;
+}
+.views-ui-display-tab-bucket .views-group-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.views-display-setting .label {
+  margin-right: .5em;
+}
+#edit-displays-preview-controls .fieldset-wrapper > .form-item {
+  margin-top: 0em;
+  display: block;
+}
+#edit-displays-preview-controls .form-submit {
+  margin-right: 0em;
+  display: block;
+}
+#views-ui-preview-form > div > div {
+  display: block;
+  margin: 2.2em .5em 0 0;
+}
+#edit-displays-preview-controls .form-type-textfield {
+  margin-left: 0em;
+}
+#edit-displays-preview-controls .form-type-textfield label {
+  border-left: 0px solid transparent;
+  padding-left: 0em;
+}
+#edit-displays-preview-controls .form-type-textfield label:after {
+  content: ":";
+}
+.views-ui-dialog {
+  font-size: inherit;
+  padding: 0;
+}
+.views-ui-dialog .ui-dialog-titlebar-close {
+  display: none;
+}
+.views-ui-dialog .ui-dialog-titlebar-close span {
+  display: block;
+}
+.views-filterable-options .form-type-checkbox {
+  border: 0px solid transparent;
+  padding: 0;
+}
+.views-filterable-options {
+  border-top:  0px solid transparent;
+}
+.views-filterable-options .even .form-type-checkbox {
+  background-color: transparent;
+}
+#views-filterable-options-controls {
+  margin: 0em 0;
+}
+.views-ui-dialog .views-filterable-options {
+  margin-bottom: 0px;
+  line-height: 2em;
+}
+#views-filterable-options-controls input,
+#views-filterable-options-controls select {
+  display: inline-block;
+}
+.views-ui-dialog #edit-selected {
+  margin: 0;
+  padding: 0;
+}
+.views-ui-dialog #views-ajax-title,
+.views-ui-dialog .views-override {
+  background-color: transparent;
+}
+.views-ui-dialog .views-override {
+  padding: 0 2em 1em;
+}
+.views-ui-dialog .views-override > * {
+  margin: 0;
+}
+.views-ui-dialog #views-ajax-title {
+  font-size: 2em;
+  padding: .5em;
+  display: block;
+  margin: 0;
+  background: $color-background-dark;
+  color: $color-text-light;
+}
+.views-ui-dialog #views-progress-indicator {
+  font-size: inherit;
+  right: 0;
+  top: 0px;
+}
+.views-ui-dialog #views-progress-indicator:before {
+  content: "\003C\00A0";
+}
+.views-ui-dialog #views-progress-indicator:after {
+  content: "\00A0\003E";
+}
+.views-ui-dialog .scroll {
+  border: 1px solid #CCC;
+  border-width: 0;
+  padding: 1em 2em;
+}
+.views-ui-dialog fieldset .item-list {
+  padding-left: 2em;
+}
+.views-ui-dialog .form-buttons {
+  background-color: #F3F4EE;
+  padding: 1em 2em;
+}
+.views-ui-dialog .form-buttons input {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.form-type-checkboxes #edit-options-value,
+.form-type-checkboxes #edit-options-validate-options-node-types {
+  border: 0px solid transparent;
+  margin-top: inherit;
+  padding: inherit;
+}
+#views-ui-rearrange-filter-form tr td[rowspan] {
+  border: 0px solid transparent;
+}
+#views-ui-rearrange-filter-form tr[id^="views-row"] {
+  border-right: 0px solid transparent;
+}
+#views-ui-rearrange-filter-form tr[id^="views-row"].even td {
+  background-color: transparent;
+}
+#views-ui-rearrange-filter-form .views-group-title {
+  border-top: 0px solid transparent;
+}
+#views-ui-rearrange-filter-form .group-empty {
+  border-bottom: 0px solid transparent;
+}
+.form-item-options-expose-required,
+.form-item-options-expose-label,
+.form-item-options-expose-description {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+#views-preview-wrapper {
+  border: 0px solid transparent;;
+  padding: 0px;
+}
+#views-ui-preview-form {
+  margin: 0px;
+}
+#views-live-preview {
+  margin: 0px;
+}
+#views-live-preview h1.section-title {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+#views-live-preview .view > * {
+  margin-top: 0px;
+}
+#views-live-preview .preview-section {
+  border: 1px dashed #DEDEDE;
+  margin: 0px;
+  padding: 0px;
+}
+#views-live-preview li.views-row + li.views-row {
+  margin-top: 0px;
+}
+#views-live-preview div.views-row + div.views-row {
+  margin-top: 0px;
+}
+.views-query-info table {
+  border-color: inherit;
+  border-spacing: 0;
+  margin: inherit;
+}
+.views-query-info table tr {
+  background-color: inherit;
+}
+.views-query-info table th,
+.views-query-info table td {
+  color: inherit;
+  padding: 0px;
+}
+#views-live-preview .view-content > .item-list > ul {
+  padding-left: 0px;
+}
+#edit-options-exception.collapsible {
+  margin-top: 0;
+}
+/* Show the drupal system throbber image */
+.ajax-progress .throbber {
+  display: block;
+}
+#views-ajax-body form {
+  margin: 1em 0;
+}
+div.messages {
+  margin-bottom: 1em;
+  background: $color-background;
+}
+
+
+/* =============================================================================
+   Workbench
+   ========================================================================== */
+
+div.admin.my-workbench .left,
+div.admin.my-workbench .right {
+  margin: 0;
+}
+
+/* =============================================================================
+   Media queries
+   ========================================================================== */
+
+@media (max-width: 960px) {
+
+  /* dashboard */
+  div#dashboard_sidebar {
+    clear: both;
+    margin: 0;
+    width: 100% !important;
+  }
+  #dashboard div#dashboard_main {
+	clear: both;
+    margin-right: 0%;
+    width: 100%;
+  }
+  /* configuration page */
+  div.admin .right, div.admin .left {
+    margin: 0;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  body.admin-expanded {
+    margin-left: 0;
+  }
+  #toolbar .screen-reader-text {
+    display: none;
+  }
+  body.admin-expanded div#admin-toolbar {
+    width: 100%;
+  }
+  body.admin-expanded div#admin-toolbar.vertical div.admin-blocks {
+    width: 100% !important;
+  }
+  #tab-bar {
+    display: none;
+  }
+  /* form elements */
+  input.form-button-disabled,
+  input.form-button-disabled:active {
+  float: none;
+  width: 100%;
+  margin-right: 10px;
+  }
+  input.form-autocomplete,
+  input.form-text,
+  input.form-file,
+  textarea.form-textarea,
+  select.form-select {
+  min-width:100% !important;
+  max-width:100% !important; /* form-text overflows the page in chrome. should be fixed in core */
+  float: none;
+  margin-right: 10px;
+  }
+  input.form-text:focus,
+  input.form-file:focus,
+  textarea.form-textarea:focus,
+  select.form-select:focus {
+  width: 100%;
+  float: none;
+  margin-right: 10px;
+  }
+  /* dashboard */
+  #dashboard div#dashboard_main {
+	clear: both;
+    margin-right: 0%;
+    width: 100%;
+  }
+  div#dashboard_sidebar {
+    clear: both;
+    margin: 0;
+    width: 100% !important;
+  }
+  /* configuration page */
+  div.admin .right, div.admin .left {
+    margin: 0;
+    width: 100%;
+  }
+  /* appearance page */
+  .system-themes-list-enabled .theme-selector .screenshot, .system-themes-list-enabled .theme-selector .no-screenshot {
+    clear: both;
+    margin: 0 40px 20px 0;
+  }
+  .system-themes-list-disabled .theme-selector {
+    float: left;
+    padding: 0 20px 20px 0;
+    width: 300px;
+  }
+  .color-form #placeholder {
+    position:relative;
+  }
+  html.js #preview {
+    margin-left: -15px;
+  }
+  /* vertical tabs */
+  div.vertical-tabs {
+    background: image-url("fc.png") repeat-y scroll -97px 0 $color-background;
+    border: 1px solid #ddd;
+  }
+  div.vertical-tabs .vertical-tabs-list {
+    width: 143px;
+  }
+  div.vertical-tabs .vertical-tabs-panes {
+    margin: 0 0 0 163px;
+  }
+
+  /* workbench */
+  div.admin.my-workbench .left,
+  div.admin.my-workbench .right {
+    float: none;
+    width: 100%;
+  }
+  div.admin.my-workbench .left {
+    margin-bottom: 20px;
+  }
+  div.admin.my-workbench .left .views-field-picture {
+    float: left;
+  }
+  div.admin.my-workbench .left .views-field-name,
+  div.admin.my-workbench .left .views-field-edit-node {
+    text-align: right;
+  }
+}
+.search-block-form {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+/* =============================================================================
+   Fade in on pageload
+   ========================================================================== */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:.3s;
+  -moz-animation-duration:.3s;
+  animation-duration:.3s;
+
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}

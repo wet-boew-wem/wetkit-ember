@@ -51,7 +51,7 @@ function wetkit_ember_preprocess_page(&$vars) {
   if (module_exists('wetkit_language')) {
     //$language_link_markup = '<li id="' . $theme_prefix . '-gcnb-lang">' . strip_tags($vars['menu_lang_bar'], '<a><span>') . '</li>';
     //$vars['lang_bar'] = '<div class="breadcrumb-site"><span class="links secondary-menu">' . $language_link_markup . '</span></div>';
-    $vars['lang_bar'] = '<div class="breadcrumb-side"><h3>' . $vars['menu_lang_bar'] . '</h3></div>';
+    $vars['lang_bar'] = '<div class="breadcrumb-side"><ul><li>' . $vars['menu_lang_bar'] . '</li></ul></div>';
   }
 }
 

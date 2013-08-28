@@ -1,21 +1,22 @@
 <?php
 ?>
 
-<div id="page"<?php echo theme_get_setting('ember_no_fadein_effect') ? '' : ' class="fade-in"'?>>
-
-  <div id="branding" class="clearfix">
+<div id="branding" class="clearfix">
     <?php print render($title_prefix); ?>
-
   <?php if ($title): ?>
       <h1 class="page-title">
       <?php print $title; ?>
       </h1>
     <?php endif; ?>
-
-    <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
+     <div id="tab-bar" class="clearfix">
+    <?php print render($tabs); ?>
     <?php print $lang_bar; ?>
+    </div>
   </div>
+
+  <div id="page"<?php echo theme_get_setting('ember_no_fadein_effect') ? '' : ' class="fade-in"'?>>
+  <?php print $breadcrumb; ?>
 
   <?php if ($page['help']): ?>
     <?php print render($page['help']); ?>
@@ -26,10 +27,6 @@
       <?php print $messages; ?>
     </div>
   <?php endif; ?>
-
-  <div id="tab-bar" class="clearfix">
-    <?php print render($tabs); ?>
-  </div>
 
   <div id="content" class="clearfix">
     <div class="element-invisible">

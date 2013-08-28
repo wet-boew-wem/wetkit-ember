@@ -4,9 +4,12 @@ package = WetKit
 core = 7.x
 
 ; Stylesheets
+;stylesheets[screen][] = css/wetkit_ember.hacks.css
+;stylesheets[screen][] = css/wetkit_ember.normalize.css
+;stylesheets[screen][] = css/wetkit_ember.styles.css
+;stylesheets[screen][] = styles/normalize.css
+stylesheets[screen][] = css/style.css
 stylesheets[screen][] = css/wetkit_ember.hacks.css
-stylesheets[screen][] = css/wetkit_ember.normalize.css
-stylesheets[screen][] = css/wetkit_ember.styles.css
 
 ; Settings
 settings[shortcut_module_link] = 1
