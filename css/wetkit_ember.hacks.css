@@ -25,11 +25,11 @@
   display: none;
 }
 
+.breadcrumb {
+  margin-bottom: 1em;
+}
 .breadcrumb span {
   font-size: 1.1em;
-}
-.breadcrumb span a {
-  color: black;
 }
 
 ul.primary {
