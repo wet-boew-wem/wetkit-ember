@@ -11,13 +11,11 @@
     <?php print render($title_suffix); ?>
      <div id="tab-bar" class="clearfix">
     <?php print render($tabs); ?>
-    <?php print $lang_bar; ?>
     </div>
   </div>
 
   <div id="page"<?php echo theme_get_setting('ember_no_fadein_effect') ? '' : ' class="fade-in"'?>>
   <?php print $breadcrumb; ?>
-
   <?php if ($page['help']): ?>
     <?php print render($page['help']); ?>
   <?php endif; ?>

@@ -6,7 +6,8 @@
    ========================================================================== */
 @include styleguide-reset;
 
-#edit-submit {
+#edit-submit,
+.form-submit {
   @extend %button-primary;
 }
 
@@ -206,7 +207,7 @@ ul.secondary a.active {
 /* =============================================================================
    Secondary links
    ========================================================================== */
-   
+
 #secondary-links ul.links li {
   padding:0 10px 10px 0; /* LTR */
 }
@@ -406,10 +407,20 @@ tr.selected > .dropbutton-widget {
    Exposed filter
    ========================================================================== */
 
+#edit-filters  {
+  float: left;
+  display: inline-block;
+  width: 60%;
+}
+#edit-options  {
+  float: left;
+  display: inline-block;
+  width: auto;
+}
 .exposed-filters .form-item {
   float: left; /* LTR */
   line-height:3.2em;
-  margin-right: 10px;
+  margin: 0 0 .5em 0;
 }
 .exposed-filters .form-item label {
   float: left; /* LTR */
@@ -429,10 +440,6 @@ tr.selected > .dropbutton-widget {
 div.exposed-filters div#edit-actions {
   float:none;
 }
-div.exposed-filters div#edit-actions input.form-submit, div#edit-actions a.button {
-  margin: inherit;
-  width:auto;
-}
 div.exposed-filters .container-inline .form-actions, .container-inline.form-actions {
   margin:0;
 }
@@ -441,17 +448,18 @@ div.exposed-filters .container-inline .form-actions, .container-inline.form-acti
   margin-right: 0.2em;
 }
 .exposed-filters .form-select {
-  margin:.5em 0 1em;
+  margin:0;
 }
-.exposed-filters .form-item label { /*forces inlline form element labels to align center vertically to the form element*/
-  font-size:1em;
-  line-height:3.2em;
+.exposed-filters .form-item label {
+  padding: 0;
+  line-height: normal;
+  padding-top: .7em;
 }
 .container-inline  {
   border:none;
 }
 .container-inline div, .container-inline label {
-  margin:0 5px 0 0;
+  margin:0;
 }
 fieldset {
   border: 0px solid transparent;
@@ -518,13 +526,12 @@ ul.admin-list {
   padding:0;
 }
 .admin-panel h3 {
-  font-size:1.4em;
+  font-size: ms(3);
   margin:0 0 15px 30px;
   padding:0 0 5px;
   border-bottom:1px solid #ddd;
-  text-transform:uppercase;
-  color: #555;
-  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 ul.admin-list li {
   background:image-url("list-item.png") no-repeat scroll 0 0 transparent;
@@ -534,12 +541,12 @@ ul.admin-list li {
   padding:0 0 0 2.5em;
 }
 ul.admin-list li a {
-  font-size: 110%;
-  font-weight: 500;
+  font-size: 1em;
+  font-weight: 900;
 }
 ul.admin-list .label {
  color:#555;
- font-size:1.05em;
+ font-size: ms(1);
 }
 .compact-link {
   text-align:right;
@@ -629,10 +636,10 @@ ol.task-list li.done {
 /* =============================================================================
    Fieldset
    ========================================================================== */
-  
+
 fieldset {
   margin: 1em 0;
-} 
+}
 legend  {
   padding: 0;
 }
@@ -936,12 +943,31 @@ div#overlay {
 .dashboard-content {
   padding:0;
 }
+.dashboard-title {
+  font-weight: 300;
+  font-size: 2em;
+  margin-bottom: .5em;
+}
 .dashboard-entry .dashboard-link {
   font-size:120%;
   font-weight:normal;
 }
 .ctools-button-processed {
   border:0;
+  background: transparent;
+}
+.ctools-button-processed li {
+  background: transparent;
+}
+/**
+ * Enlarge dropbutton arrow
+ */
+.ctools-twisty {
+  border-width: 6px 6px 0;
+}
+.ctools-dropbutton-processed.open .ctools-twisty {
+  border-bottom: 6px solid;
+  top: 0.3em;
 }
 .dashboard-block {
   border-bottom:none;
@@ -949,13 +975,67 @@ div#overlay {
   padding-bottom:0;
 }
 .panels-dashboard .links {
-  margin-top:5px;
+  margin-top:0;
 }
 div.dashboard-block { /* panels dashboard, not dashboard */
-  padding: 1px 10px 10px;
-  background: $color-background;
-  border:1px solid #ddd;
-  margin-bottom: 20px;
+  padding: 0;
+  background: transparent;
+  border:0px solid transparent;
+  margin-bottom: 0;
+}
+dl.page-manager-wizards  {
+  background: url('../images/list-item.png?1377114396') no-repeat scroll 0 0 transparent;
+  margin: 0 0 1em;
+  padding: 0 0 0 2.5em;
+}
+dl.page-manager-wizards dt {
+  font-size: 1em;
+  font-weight: 500;
+}
+dl.page-manager-wizards dd  {
+  margin-left: 0;
+}
+#page-manager-edit .page-manager-wrapper,
+#page-manager-edit .page-manager-tabs,
+#page-manager-edit .page-manager-edit-operations ul,
+#page-manager-edit .page-manager-edit-operations ul li  {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+#page-manager-edit .page-manager-edit-operations .inside {
+  border: 0px solid transparent;
+}
+#page-manager-edit .page-manager-edit-operations li {
+  background: transparent;
+  border: 0px solid transparent;
+}
+#page-manager-edit .page-manager-edit-operations li.changed,
+#page-manager-edit .page-manager-edit-operations li.changed-group .page-manager-group-title {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+#page-manager-edit table tr.even {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+#page-manager-edit .page-manager-ajax-pad {
+  background: transparent;
+  border-left: 1px solid #ddd;
+}
+#page-manager-edit .actions li a {
+  color:inherit;
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+#page-manager-edit .page-manager-changed {
+  float: left; /* LTR */
+  font-style: italic;
+  color: inherit;
+  padding-left: 1em;
+  padding-right: 22px;
+  background: none;
+  background-color: transparent;
+  border: 0px solid transparent;
 }
 
 /* =============================================================================
@@ -996,7 +1076,7 @@ div.vertical-tabs ul li.vertical-tab-button a:focus {
 /* =============================================================================
    Views
    ========================================================================== */
-   
+
 .views-admin ul,
 .views-admin menu,
 .views-admin dir {
@@ -1546,7 +1626,6 @@ div.messages {
   background: $color-background;
 }
 
-
 /* =============================================================================
    Workbench
    ========================================================================== */
@@ -1569,7 +1648,7 @@ div.admin.my-workbench .right {
     width: 100% !important;
   }
   #dashboard div#dashboard_main {
-	clear: both;
+  clear: both;
     margin-right: 0%;
     width: 100%;
   }
@@ -1625,7 +1704,7 @@ div.admin.my-workbench .right {
   }
   /* dashboard */
   #dashboard div#dashboard_main {
-	clear: both;
+  clear: both;
     margin-right: 0%;
     width: 100%;
   }
@@ -1685,8 +1764,14 @@ div.admin.my-workbench .right {
   }
 }
 .search-block-form {
-	margin-top:20px;
-	margin-bottom:20px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.theme-info {
+  h3 {
+    font-size: ms(2);
+  }
 }
 
 /* =============================================================================

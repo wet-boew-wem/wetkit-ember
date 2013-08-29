@@ -13,13 +13,12 @@ $color-warning: #f79521 !default;
 $color-error: #cb2026 !default;
 $color-link: #2fa6e5 !default;
 $color-link-visited: saturate(shade($color-link, 20), 50) !default;
-$color-link-hover: saturate(tint($color-link, 20), 50) !default;
-$color-link-alternate: #f15b26 !default;
+$color-link-hover: saturate(shade($color-link, 30), 60) !default;
+$color-link-alternate: #f05724 !default;
 $color-link-alternate-visited: saturate(shade($color-link-alternate, 20), 50) !default;
 $color-link-alternate-hover: saturate(tint($color-link-alternate, 20), 50) !default;
 $color-background: #fff !default;
 $color-background-alternate: #eee !default;
-$color-background-medium: #999  !default;
 $color-background-dark: #555 !default;
 $color-background-highlight: tint($color-highlight, 90) !default;
 
