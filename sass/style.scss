@@ -105,18 +105,21 @@ ul.action-links {
 }
 .action-links li {
   display: inline-block;
-  margin-right: 1em;
-  font-size: 120%;
-  color: $color-text;
+  margin-right: .5em;
+  margin-left: 0;
+  font-size: 1.2em;
   font-weight: 900;
 }
 .action-links li a:hover  {
   text-decoration: none;
 }
 .action-links li:before {
-  content: "+ ";
-  font-size: 200%;
-  color: $color-link;
+  content: "\2295";
+  font-size: 2em;
+  top: .1em;
+  color: $color-icon;
+  position: relative;
+  margin-right: .1em;
 }
 
 /* =============================================================================
@@ -644,7 +647,7 @@ legend  {
   padding: 0;
 }
 .fieldset-legend  {
-  font-size: 180%;
+  font-size: ms(1);
   font-weight: 200;
   line-height: normal;
   margin: 0;

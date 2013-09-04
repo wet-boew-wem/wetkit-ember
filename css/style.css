@@ -1147,7 +1147,7 @@ button[class*="action-item-large"],
 }
 
 body {
-  background: white url('../images/spark_bg_tile.png?1377731746');
+  background: white url('../images/spark_bg_tile.png?1377820873');
 }
 
 /* =============================================================================
@@ -1248,9 +1248,9 @@ ul.action-links {
 
 .action-links li {
   display: inline-block;
-  margin-right: 1em;
-  font-size: 120%;
-  color: #333333;
+  margin-right: .5em;
+  margin-left: 0;
+  font-size: 1.2em;
   font-weight: 900;
 }
 
@@ -1259,9 +1259,12 @@ ul.action-links {
 }
 
 .action-links li:before {
-  content: "+ ";
-  font-size: 200%;
-  color: #2fa6e5;
+  content: "\2295";
+  font-size: 2em;
+  top: .1em;
+  color: #999999;
+  position: relative;
+  margin-right: .1em;
 }
 
 /* =============================================================================
@@ -1753,7 +1756,7 @@ ul.admin-list {
 }
 
 ul.admin-list li {
-  background: url('../images/list-item.png?1377731746') no-repeat scroll 0 0 transparent;
+  background: url('../images/list-item.png?1377820873') no-repeat scroll 0 0 transparent;
   list-style-image: none;
   list-style-type: none;
   margin: 0 0 1em;
@@ -1860,7 +1863,7 @@ ol.task-list li {
 }
 
 ol.task-list li.active {
-  background: transparent url('../images/task-item.png?1377731746') no-repeat 3px 50%;
+  background: transparent url('../images/task-item.png?1377820873') no-repeat 3px 50%;
   /* LTR */
   color: #000;
   padding: 0.5em 1em 0.5em 20px;
@@ -1868,7 +1871,7 @@ ol.task-list li.active {
 }
 
 ol.task-list li.done {
-  background: transparent url('../images/task-check.png?1377731746') no-repeat 0 50%;
+  background: transparent url('../images/task-check.png?1377820873') no-repeat 0 50%;
   color: green;
 }
 
@@ -1884,7 +1887,7 @@ legend {
 }
 
 .fieldset-legend {
-  font-size: 180%;
+  font-size: 1.5em;
   font-weight: 200;
   line-height: normal;
   margin: 0;
@@ -3165,7 +3168,7 @@ div.admin.my-workbench .right {
 
   /* vertical tabs */
   div.vertical-tabs {
-    background: url('../images/fc.png?1377731746') repeat-y scroll -97px 0 white;
+    background: url('../images/fc.png?1377820873') repeat-y scroll -97px 0 white;
     border: 1px solid #ddd;
   }
 
