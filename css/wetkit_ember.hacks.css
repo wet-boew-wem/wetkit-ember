@@ -20,6 +20,13 @@ ul.primary li.active a:hover {
   padding: 0;
 }
 
+ul.secondary {
+  margin: 0 -3.1em;
+  padding: .5em 3.5em;
+  background-color: #3b3b3b;
+  box-shadow: none;
+}
+
 .form-wrapper,
 .container-inline {
   margin-bottom: 2em;
@@ -32,4 +39,34 @@ ul.primary li.active a:hover {
 
 div.vertical-tabs .vertical-tabs-panes .vertical-tabs-pane fieldset {
   padding: 2.5em 1.5em;
+}
+
+.media-browser-tab {
+  padding: 1.5em;
+}
+
+#media-browser-tabset ul.tabs.primary li a:link {
+  color: #FFF;
+}
+
+#media-browser-tabset #media-tabs-wrapper ul.tabs.primary li a {
+  background-color: #008fdc;
+}
+
+#media-browser-tabset #media-tabs-wrapper ul.tabs.primary li a:hover {
+  background-color: #FFF;
+  color: #000;
+}
+
+#media-browser-tabset #branding {
+  background-color: #000;
+  padding-bottom: 0.5em;
+}
+
+.form-managed-file .form-file {
+  margin-bottom: 1em;
+}
+
+.views-displays .secondary .active a, .views-displays .secondary .active a:hover {
+  border-color: #008fdc;
 }

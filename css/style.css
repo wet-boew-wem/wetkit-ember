@@ -73,7 +73,9 @@ code strong {
 }
 
 /* =============================================================================
-   Generic elements
+
+   GENERIC ELEMENTS
+
    ========================================================================== */
 /**
  * Default element styles
@@ -1147,37 +1149,42 @@ button[class*="action-item-large"],
 }
 
 body {
-  background: white url('../images/spark_bg_tile.png?1378301358');
+  background: white url('../images/spark_bg_tile.png?1378579607');
 }
 
-/* =============================================================================
-   Form elements
-   ========================================================================== */
-/* Exceptions */
-#diff-inline-form select,
-div.filter-options select {
+img {
+  margin: 0.66667em 0;
+}
+
+legend {
   padding: 0;
 }
 
-.form-select {
-  max-width: 300px;
-  background: white url("../images/select_sprite.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-  padding-right: 45px;
-}
-
-.form-item.form-type-select.form-item-operation {
-  max-width: 300px;
+h2, h3 {
+  color: #555;
 }
 
 textarea {
   height: 200px;
 }
 
+fieldset {
+  border: 0px solid transparent;
+  margin: 0em;
+  padding: 0em;
+}
+
+tr,
+td {
+  background-color: transparent;
+}
+
 /* =============================================================================
-   Skip link
+
+   DRUPAL ADDMIN INTERACTION PATTERNS
+
    ========================================================================== */
+/* SKIP LINK */
 #skip-link {
   left: 50%;
   /* LTR */
@@ -1208,54 +1215,161 @@ textarea {
   outline: 0;
 }
 
-/* =============================================================================
-   Help
-   ========================================================================== */
-#help {
-  margin: 1em 0;
-  line-height: 1.6em;
-}
-
-.region .region-help ul {
-  margin: 0 0 20px 0;
-}
-
-#help div.more-help-link {
-  text-align: right;
+/* MESSAGES */
+div.messages {
+  background-position: 8px 8px;
+  /* LTR */
+  background-repeat: no-repeat;
+  border: 1px solid;
+  margin: 6px 0;
+  padding: 10px 10px 10px 40px;
   /* LTR */
 }
 
-.region-help {
-  margin-bottom: 1em;
+div.status {
+  background-image: url(../images/success.svg);
+  border-color: #ddd;
+  border-left: 4px solid #82bb41;
+  /* ltr */
 }
 
-.region-help p {
-  font-size: 1.1em;
-  color: #555;
+div.status,
+.ok {
+  color: #333333;
 }
 
-/* =============================================================================
-   Branding (includes page title, shortcut, contextual links and breadcrumb)
-   ========================================================================== */
-#branding {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #555555;
-  padding: 1em 3.16049em 0;
-  width: 100%;
-  color: white;
+div.status,
+table tr.ok {
+  background-color: #fff;
 }
 
-#branding h1.page-title {
-  margin-top: 0;
-  font-size: 2.75em;
+div.warning {
+  background-image: url(../images/warning.svg);
+  border-color: #ddd;
+  border-left: 4px solid #f79521;
+  /* ltr */
+}
+
+div.warning,
+.warning {
+  color: #333333;
+}
+
+div.warning,
+table tr.warning {
+  background-color: #fff;
+  border-left: 4px solid #f79521;
+  /* ltr */
+}
+
+div.error {
+  background-image: url(../images/error.svg);
+  border-color: #ddd;
+  border-left: 4px solid #cb2026;
+  /* ltr */
+}
+
+div.error,
+.error {
+  color: #333333;
+}
+
+div.error,
+table tr.error {
+  background-color: #fff;
+  border-left: 4px solid #cb2026;
+  /* ltr */
+}
+
+/* FORM ELEMENTS */
+#diff-inline-form select,
+div.filter-options select {
+  padding: 0;
+}
+
+.form-select {
+  max-width: 300px;
+  background: white url("../images/select_sprite.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 45px;
+}
+
+.form-item.form-type-select.form-item-operation {
+  max-width: 300px;
+}
+
+.machine-name-label {
+  margin-left: 10px;
+}
+
+/* ADMIN LISTS */
+div.admin {
+  padding: 0;
+}
+
+.block .body ul {
+  margin: 0;
+}
+
+div.admin-panel {
+  margin: 0 0 2em;
+  padding: 0 20px 0 0;
+}
+
+div.admin-panel .body {
+  padding: 0;
+}
+
+ul.admin-list {
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+.admin-panel h3 {
+  font-size: 1.5em;
+  margin: 0 0 15px 30px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
   font-weight: 200;
 }
 
-/* =============================================================================
-   Shortcuts
-   ========================================================================== */
+ul.admin-list li {
+  background: url('../images/list-item.png?1378579607') no-repeat scroll 0 0 transparent;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0 0 1em;
+  padding: 0 0 0 2.5em;
+}
+
+ul.admin-list li a {
+  font-size: 1em;
+  font-weight: 900;
+}
+
+ul.admin-list .label {
+  color: #555;
+  font-size: 1.5em;
+}
+
+.compact-link {
+  text-align: right;
+  margin: -1em 0 0;
+  /* pushes link up into the padding of #content so list has an even margin all around */
+}
+
+ul.admin-list.compact li {
+  background: none;
+  margin: 0;
+}
+
+/* CONTEXTUAL LINKS */
+.contextual-links-trigger {
+  transition: none;
+}
+
+/* SHORTCUTS */
 div.add-or-remove-shortcuts {
   float: right;
   margin-top: -50px;
@@ -1295,37 +1409,7 @@ div.add-or-remove-shortcuts a:hover span.text {
   color: white;
 }
 
-/* =============================================================================
-   Action links
-   ========================================================================== */
-ul.action-links {
-  margin: 0;
-}
-
-.action-links li {
-  display: inline-block;
-  margin-right: .5em;
-  margin-left: 0;
-  font-size: 1.2em;
-  font-weight: 900;
-}
-
-.action-links li a:hover {
-  text-decoration: none;
-}
-
-.action-links li:before {
-  content: "\2295";
-  font-size: 2em;
-  top: .1em;
-  color: #999999;
-  position: relative;
-  margin-right: .1em;
-}
-
-/* =============================================================================
-   Tabs
-   ========================================================================== */
+/* TABS */
 .tabs.primary {
   margin: 1em 0 0;
   padding: 0;
@@ -1397,28 +1481,33 @@ ul.secondary a.active {
   color: white;
 }
 
-/* =============================================================================
-   Console
-   ========================================================================== */
-#console {
-  margin: 9px 0 10px;
+/* ACTION LINKS */
+ul.action-links {
+  margin: 0;
 }
 
-/* =============================================================================
-   Page
-   ========================================================================== */
-#content {
-  clear: left;
+.action-links li {
+  display: inline-block;
+  margin-right: .5em;
+  margin-left: 0;
+  font-size: 1.2em;
+  font-weight: 900;
 }
 
-#page {
-  margin: 1em 3.16049em 0;
+.action-links li a:hover {
+  text-decoration: none;
+}
+
+.action-links li:before {
+  content: "\2295";
+  font-size: 2em;
+  top: .1em;
+  color: #999999;
   position: relative;
+  margin-right: .1em;
 }
 
-/* =============================================================================
-   Secondary links
-   ========================================================================== */
+/* SECONDARY LINKS */
 #secondary-links ul.links li {
   padding: 0 10px 10px 0;
   /* LTR */
@@ -1442,121 +1531,64 @@ ul.inline li {
   display: inline;
 }
 
-/* =============================================================================
-   Tables
-   ========================================================================== */
-tr,
-td,
-tr.odd,
-tr.even {
-  background-color: transparent;
+/* FIELDSET */
+.fieldset-legend {
+  font-size: 1.5em;
+  font-weight: 200;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
 }
 
-tr.drag {
-  background-color: #feffd5;
+.fieldset-wrapper .form-select {
+  display: inline-block;
+  margin-right: .5em;
 }
 
-a.tabledrag-handle .handle {
-  background: url(../images/drag-handle.png) no-repeat 6px 8px;
-  height: 20px;
-  margin: -0.4em 0.5em;
-  /* LTR */
-  padding: 0.42em 0.5em;
-  /* LTR */
-  width: 13px;
+/* SUMMARY AND DETAILS */
+summary:focus {
+  outline: 0px solid transparent;
+  /*hides browser focus border on this element since it contains no user action. Should not effect a11y.*/
 }
 
-tr.drag-previous {
-  background-color: #feffd5;
+summary {
+  background: url("../../misc/menu-expanded.png") no-repeat scroll 0 100% #eeeeee;
+  height: 2em;
+  border: 0px solid transparent;
+  padding: 0 10px;
+  background: #f5f5f5;
+  border-radius: 4px 4px 0 0;
+  line-height: 2em;
 }
 
-tr.region-title {
-  background-color: transparent;
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapse-processed > summary:before {
+  background-position: 0 70%;
+  height: 1.6em;
+  width: 1em;
+}
+
+.collapse-processed > summary {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+details {
   border: 0px solid transparent;
 }
 
-table th.active img {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  /* LTR */
+details > .details-wrapper,
+.container-inline .details-wrapper {
+  padding: 10px;
+  border: solid #eee;
+  border-width: 0px 1px 1px 1px;
+  margin: 0 0 1em;
 }
 
-table td.active {
-  background-color: white;
-}
-
-table tr.selected td.active,
-table tr.selected td {
-  background: #f9f9f9;
-}
-
-table td ul.inline {
-  margin: 0;
-}
-
-table.system-status-report tr {
-  border-bottom: 1px solid #ddd;
-}
-
-table.system-status-report tr.ok {
-  background-color: transparent;
-  color: #82bb41;
-}
-
-table.system-status-report tr.info {
-  background-color: transparent;
-  color: #29aae2;
-}
-
-table.system-status-report tr.warning {
-  background-color: transparent;
-  color: #f79521;
-}
-
-table.system-status-report tr.error {
-  background-color: transparent;
-  color: #cb2026;
-}
-
-table.sticky-header {
-  z-index: 2;
-}
-
-#system-modules label {
-  font-weight: normal;
-}
-
-#system-modules .expand .inner {
-  outline: 0px solid transparent;
-}
-
-tr.odd .form-item,
-tr.even .form-item,
-tr.odd .form-actions,
-tr.even .form-actions {
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.tabledrag-changed:after {
-  content: " previewing, save blocks to confirm";
-  color: #f79521;
-}
-
-/**
- * Exception for webkit bug with the right border of the last cell
- * in some tables, since it's webkit only, we can use :last-child
-*/
-tr td:last-child {
-  border-right: none;
-  /* LTR */
-}
-
-/* =============================================================================
-   Filter
-   ========================================================================== */
+/* FILTERS */
 .filter-wrapper {
   border-top: 0;
   padding: 10px 2px;
@@ -1574,68 +1606,6 @@ tr td:last-child {
   /* LTR */
 }
 
-ul.tips,
-div.description,
-.form-item div.description {
-  font-size: 0.923em;
-  line-height: 1.231em;
-  margin: 5px 0;
-}
-
-ul.tips li {
-  margin: 0.25em 0 0.25em 1.5em;
-  /* LTR */
-}
-
-body div.form-type-radio div.description,
-body div.form-type-checkbox div.description {
-  margin-left: 1.5em;
-  /* LTR */
-}
-
-/* =============================================================================
-   Dropbutton
-   ========================================================================== */
-.js .dropbutton-widget {
-  background: #f5f5f5;
-  border: 0px solid transparent;
-  border-radius: 4px;
-  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.dropbutton-widget .dropbutton {
-  line-height: 1.8em;
-}
-
-.js .dropbutton-widget a {
-  color: #555;
-}
-
-.js .dropbutton-widget a:hover {
-  color: #000;
-}
-
-.dropbutton-multiple .dropbutton {
-  border-right: 1px solid #ddd;
-}
-
-.dropbutton-toggle button {
-  background: none;
-}
-
-.dropbutton .secondary-action {
-  border-top: 1px solid #ddd;
-}
-
-tr.selected > .dropbutton-widget {
-  background: white;
-}
-
-/* =============================================================================
-   Exposed filter
-   ========================================================================== */
 #edit-filters {
   float: left;
   display: inline-block;
@@ -1719,149 +1689,317 @@ div.exposed-filters div#edit-actions .form-select {
   margin: 0;
 }
 
-fieldset {
-  border: 0px solid transparent;
-  margin: 0em;
-  padding: 0em;
+/* TIPS */
+ul.tips,
+div.description,
+.form-item div.description {
+  font-size: 0.923em;
+  line-height: 1.231em;
+  margin: 5px 0;
 }
 
-summary:focus {
+ul.tips li {
+  margin: 0.25em 0 0.25em 1.5em;
+  /* LTR */
+}
+
+body div.form-type-radio div.description,
+body div.form-type-checkbox div.description {
+  margin-left: 1.5em;
+  /* LTR */
+}
+
+/* TABLES */
+tr.odd,
+tr.even {
+  background-color: transparent;
+}
+
+tr.drag {
+  background-color: #feffd5;
+}
+
+a.tabledrag-handle .handle {
+  background: url(../images/drag-handle.png) no-repeat 6px 8px;
+  height: 20px;
+  margin: -0.4em 0.5em;
+  /* LTR */
+  padding: 0.42em 0.5em;
+  /* LTR */
+  width: 13px;
+}
+
+tr.drag-previous {
+  background-color: #feffd5;
+}
+
+tr.region-title {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+table th.active img {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  /* LTR */
+}
+
+table td.active {
+  background-color: #e5e5e5;
+}
+
+table tr.selected td.active,
+table tr.selected td {
+  background: #f9f9f9;
+}
+
+table td ul.inline {
+  margin: 0;
+}
+
+table.system-status-report tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table.system-status-report tr.ok {
+  background-color: transparent;
+  color: #82bb41;
+}
+
+table.system-status-report tr.info {
+  background-color: transparent;
+  color: #29aae2;
+}
+
+table.system-status-report tr.warning {
+  background-color: transparent;
+  color: #f79521;
+}
+
+table.system-status-report tr.error {
+  background-color: transparent;
+  color: #cb2026;
+}
+
+table.sticky-header {
+  z-index: 2;
+}
+
+#system-modules label {
+  font-weight: normal;
+}
+
+#system-modules .expand .inner {
   outline: 0px solid transparent;
-  /*hides browser focus border on this element since it contains no user action. Should not effect a11y.*/
 }
 
-summary {
-  background: url("../../misc/menu-expanded.png") no-repeat scroll 0 100% #eeeeee;
-  height: 2em;
-  border: 0px solid transparent;
-  padding: 0 10px;
+tr.odd .form-item,
+tr.even .form-item,
+tr.odd .form-actions,
+tr.even .form-actions {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.tabledrag-changed:after {
+  content: " previewing, save blocks to confirm";
+  color: #f79521;
+}
+
+/**
+ * Exception for webkit bug with the right border of the last cell
+ * in some tables, since it's webkit only, we can use :last-child
+*/
+tr td:last-child {
+  border-right: none;
+  /* LTR */
+}
+
+/* VERTICAL TABS */
+div.vertical-tabs fieldset {
+  box-shadow: none;
+}
+
+.vertical-tabs:focus,
+ul.vertical-tabs-list:focus,
+li.selected:focus {
+  outline: 0px solid transparent;
+}
+
+.vertical-tabs details > .details-wrapper {
+  border: 1px solid transparent;
+  padding: 10px 20px;
+}
+
+.vertical-tabs-pane div.form-item {
+  display: block;
+}
+
+div.vertical-tabs ul li.vertical-tab-button a:hover,
+div.vertical-tabs ul li.vertical-tab-button a:focus {
+  background: #e9e9e9;
+  outline: 0px solid transparent;
+}
+
+/* DROPBUTTON */
+.js .dropbutton-widget {
   background: #f5f5f5;
-  border-radius: 4px 4px 0 0;
-  line-height: 2em;
+  border: 0px solid transparent;
+  border-radius: 4px;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-summary::-webkit-details-marker {
+.dropbutton-widget .dropbutton {
+  line-height: 1.8em;
+}
+
+.js .dropbutton-widget a {
+  color: #555;
+}
+
+.js .dropbutton-widget a:hover {
+  color: #000;
+}
+
+.dropbutton-multiple .dropbutton {
+  border-right: 1px solid #ddd;
+}
+
+.dropbutton-toggle button {
+  background: none;
+}
+
+.dropbutton .secondary-action {
+  border-top: 1px solid #ddd;
+}
+
+tr.selected > .dropbutton-widget {
+  background: white;
+}
+
+/* OVERLAY (not recommended for use with Ember theme) */
+div#overlay {
+  min-width: 200px;
+  max-width: 800px;
+}
+
+#overlay-content {
+  padding: 0;
+}
+
+.overlay #branding {
+  background-color: #555555;
+  padding: 20px 20px 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+#overlay-titlebar,
+.overlay .breadcrumb,
+.overlay .region-help,
+.overlay #left,
+.overlay #footer {
   display: none;
 }
 
-.collapse-processed > summary:before {
-  background-position: 0 70%;
-  height: 1.6em;
-  width: 1em;
+.overlay #content {
+  padding: 0;
+  margin: 0;
+  border: 0 solid transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
-.collapse-processed > summary {
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+.overlay .content,
+.overlay .actions {
+  padding: 20px 20px 0;
 }
 
-details {
-  border: 0px solid transparent;
+.overlay #page {
+  margin: 0;
+  padding: 0;
 }
 
-details > .details-wrapper,
-.container-inline .details-wrapper {
-  padding: 10px;
-  border: solid #eee;
-  border-width: 0px 1px 1px 1px;
-  margin: 0 0 1em;
-}
-
-.machine-name-label {
-  margin-left: 10px;
+.overlay #content {
+  padding: 0;
 }
 
 /* =============================================================================
-   Admin lists
+
+   STYLING SPECIFIC TO REGIONS
+
    ========================================================================== */
-div.admin {
-  padding: 0;
+/* Branding region (includes page title, shortcut, contextual links and breadcrumb) */
+#branding {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #555555;
+  padding: 1em 3.16049em 0;
+  width: 100%;
+  color: white;
 }
 
-.block .body ul {
-  margin: 0;
-}
-
-div.admin-panel {
-  margin: 0 0 2em;
-  padding: 0 20px 0 0;
-}
-
-div.admin-panel .body {
-  padding: 0;
-}
-
-ul.admin-list {
-  margin: 0 0 2em;
-  padding: 0;
-}
-
-.admin-panel h3 {
-  font-size: 2.25em;
-  margin: 0 0 15px 30px;
-  padding: 0 0 5px;
-  border-bottom: 1px solid #ddd;
-  text-transform: uppercase;
+#branding h1.page-title {
+  margin-top: 0;
+  font-size: 2.75em;
   font-weight: 200;
 }
 
-ul.admin-list li {
-  background: url('../images/list-item.png?1378301358') no-repeat scroll 0 0 transparent;
-  list-style-image: none;
-  list-style-type: none;
-  margin: 0 0 1em;
-  padding: 0 0 0 2.5em;
+/* CONSOLE REGION */
+#console {
+  margin: 9px 0 10px;
 }
 
-ul.admin-list li a {
-  font-size: 1em;
-  font-weight: 900;
+/* HELP REGION */
+#help {
+  margin: 1em 0;
+  line-height: 1.6em;
 }
 
-ul.admin-list .label {
-  color: #555;
-  font-size: 1.5em;
+.region .region-help ul {
+  margin: 0 0 20px 0;
 }
 
-.compact-link {
+#help div.more-help-link {
   text-align: right;
-  margin: -1em 0 0;
-  /* pushes link up into the padding of #content so list has an even margin all around */
+  /* LTR */
 }
 
-ul.admin-list.compact li {
-  background: none;
-  margin: 0;
+.region-help {
+  margin-bottom: 1em;
 }
 
-/* =============================================================================
-   Admin appearance
-   ========================================================================== */
-.theme-default .screenshot,
-.theme-selector .screenshot {
-  border: 2px solid #999;
-  padding: 0px;
+.region-help p {
+  font-size: 1.1em;
+  color: #555;
 }
 
-img.screenshot {
-  margin: 0;
+/* PAGE REGION */
+#content {
+  clear: left;
 }
 
-.theme-default h3 {
-  font-weight: normal;
-  color: #f05724;
+#page {
+  margin: 1em 3.16049em 0;
+  position: relative;
 }
 
-/* =============================================================================
-   Update status
-   ========================================================================== */
+/* Update status */
 .versions table.version {
   border: none;
 }
 
 /* =============================================================================
-   Maintenance page
+
+   STYLING SPECIFIC TO UIs
+
    ========================================================================== */
+/* MAINTENANCE UI */
 body.in-maintenance #sidebar-first {
   float: left;
   /* LTR */
@@ -1922,7 +2060,7 @@ ol.task-list li {
 }
 
 ol.task-list li.active {
-  background: transparent url('../images/task-item.png?1378301358') no-repeat 3px 50%;
+  background: transparent url('../images/task-item.png?1378579607') no-repeat 3px 50%;
   /* LTR */
   color: #000;
   padding: 0.5em 1em 0.5em 20px;
@@ -1930,89 +2068,11 @@ ol.task-list li.active {
 }
 
 ol.task-list li.done {
-  background: transparent url('../images/task-check.png?1378301358') no-repeat 0 50%;
+  background: transparent url('../images/task-check.png?1378579607') no-repeat 0 50%;
   color: green;
 }
 
-/* =============================================================================
-   Fieldset
-   ========================================================================== */
-fieldset {
-  margin: 1em 0;
-}
-
-legend {
-  padding: 0;
-}
-
-.fieldset-legend {
-  font-size: 1.5em;
-  font-weight: 200;
-  line-height: normal;
-  margin: 0;
-  padding: 0;
-}
-
-.fieldset-wrapper .form-select {
-  display: inline-block;
-  margin-right: .5em;
-}
-
-/* =============================================================================
-   Overlay
-   ========================================================================== */
-div#overlay {
-  min-width: 200px;
-  max-width: 800px;
-}
-
-#overlay-content {
-  padding: 0;
-}
-
-.overlay #branding {
-  background-color: #555555;
-  padding: 20px 20px 0px;
-  border-bottom: 1px solid #ddd;
-}
-
-#overlay-titlebar,
-.overlay .breadcrumb,
-.overlay .region-help,
-.overlay #left,
-.overlay #footer {
-  display: none;
-}
-
-.overlay #content {
-  padding: 0;
-  margin: 0;
-  border: 0 solid transparent;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.overlay .content,
-.overlay .actions {
-  padding: 20px 20px 0;
-}
-
-.overlay #page {
-  margin: 0;
-  padding: 0;
-}
-
-.overlay #content {
-  padding: 0;
-}
-
-/* =============================================================================
-   Toolbar
-   ========================================================================== */
-/* =============================================================================
-   Dashboard
-   ========================================================================== */
+/* DASHBOARD UI */
 #dashboard .region {
   margin: 0;
 }
@@ -2075,9 +2135,7 @@ div#overlay {
   padding: 5px 4px 5px 8px;
 }
 
-/* =============================================================================
-   Content types (field UI)
-   ========================================================================== */
+/* CONTENT TYPES UI */
 #field-display-overview input.field-formatter-settings-edit {
   margin: 0;
   padding: 1px 8px;
@@ -2103,9 +2161,39 @@ div#overlay {
   margin-bottom: 0;
 }
 
+/* PEOPLE UI */
+#permissions td.module {
+  background-color: #f5f5f5;
+  background-image: none;
+  font-weight: bold;
+}
+
+/* APPEARANCE UI */
+.theme-default .screenshot,
+.theme-selector .screenshot {
+  border: 2px solid #999;
+  padding: 0px;
+}
+
+img.screenshot {
+  margin: 0;
+}
+
+.theme-default h3 {
+  font-weight: normal;
+  color: #f05724;
+}
+
+.system-themes-list h2 {
+  font-size: 2.25em;
+}
+
 /* =============================================================================
-   Recent content block
+
+   STYLING SPECIFIC TO BLOCKS
+
    ========================================================================== */
+/* Recent content block */
 #dashboard div#block-node-recent div.content {
   padding: 0;
 }
@@ -2120,9 +2208,7 @@ div#overlay {
   /* LTR */
 }
 
-/* =============================================================================
-   User login block
-   ========================================================================== */
+/* User login block */
 #user-login-form .openid-links {
   margin-left: 0;
   /* LTR */
@@ -2160,15 +2246,13 @@ div#overlay {
 }
 
 /* =============================================================================
-   Appearance
-   ========================================================================== */
-.system-themes-list h2 {
-  font-size: 2.25em;
-}
 
-/* =============================================================================
-   Ctools
-   ========================================================================== */
+   STYLES SPECIFIC TO CONTRIBUTED MODULES
+   navbar, ctools, media, views, views UI, panels, panelizer, workbench
+
+   ============================================================================= */
+/* Navbar (coming soon) */
+/* Ctools */
 #ctools-export-ui-list-form .form-submit {
   margin-top: 2em !important;
 }
@@ -2191,254 +2275,7 @@ div#overlay {
   background-color: white;
 }
 
-/* =============================================================================
-   Media
-   ========================================================================== */
-/* Field widget */
-.media-widget {
-  padding: 9px 0;
-  margin: 0 10px 10px 0;
-}
-
-.media-widget:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.media-widget .form-item {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-.media-widget .preview {
-  background: #CCC;
-  min-height: 110px;
-  min-width: 110px;
-  margin-right: 10px;
-  border: 1px solid #CCC;
-  float: left;
-}
-
-.media-widget .preview .media-item {
-  margin: 0;
-  border: 0;
-}
-
-.media-widget .button {
-  display: block;
-}
-
-/* Media browser */
-#media-browser-tabset #branding {
-  padding: 10px 0 0 10px;
-}
-
-#media-browser-tabset ul.tabs.primary li {
-  margin-right: 0;
-  margin-left: .2em;
-}
-
-#media-browser-tabset ul.tabs.primary li a:link {
-  position: relative;
-  top: 1px;
-  font-size: 1.2em;
-  font-weight: normal;
-  padding: .5em 1em;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.06);
-  border: 0px solid rgba(0, 0, 0, 0);
-  color: #555;
-  vertical-align: text-bottom;
-  border-radius: 0;
-}
-
-#media-browser-tabset ul.tabs.primary li.ui-state-active a {
-  background: transparent;
-  border: 0px solid transparent;
-  border-bottom: 0px solid transparent;
-  color: #555555;
-}
-
-#media-browser-page .button {
-  margin: 1em .5em 1em 0;
-  min-width: 80px;
-  font-size: 1.1em;
-  color: #555555;
-  border: 1px solid #DDD;
-  border-radius: 4px;
-  cursor: pointer;
-  height: 2.2em;
-  margin-right: 0.5em;
-  padding: 6px 17px;
-  text-align: center;
-}
-
-/* =============================================================================
-   Panels
-   ========================================================================== */
-.dashboard-content {
-  padding: 0;
-}
-
-.dashboard-title {
-  font-weight: 300;
-  font-size: 2em;
-  margin-bottom: .5em;
-}
-
-.dashboard-entry .dashboard-link {
-  font-size: 120%;
-  font-weight: normal;
-}
-
-.ctools-button-processed {
-  border: 0;
-  background: transparent;
-}
-
-.ctools-button-processed li {
-  background: transparent;
-}
-
-/**
- * Enlarge dropbutton arrow
- */
-.ctools-twisty {
-  border-width: 6px 6px 0;
-}
-
-.ctools-dropbutton-processed.open .ctools-twisty {
-  border-bottom: 6px solid;
-  top: 0.3em;
-}
-
-.dashboard-block {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.panels-dashboard .links {
-  margin-top: 0;
-}
-
-div.dashboard-block {
-  /* panels dashboard, not dashboard */
-  padding: 0;
-  background: transparent;
-  border: 0px solid transparent;
-  margin-bottom: 0;
-}
-
-dl.page-manager-wizards {
-  background: url("../images/list-item.png?1377114396") no-repeat scroll 0 0 transparent;
-  margin: 0 0 1em;
-  padding: 0 0 0 2.5em;
-}
-
-dl.page-manager-wizards dt {
-  font-size: 1em;
-  font-weight: 500;
-}
-
-dl.page-manager-wizards dd {
-  margin-left: 0;
-}
-
-#page-manager-edit .page-manager-wrapper,
-#page-manager-edit .page-manager-tabs,
-#page-manager-edit .page-manager-edit-operations ul,
-#page-manager-edit .page-manager-edit-operations ul li {
-  background-color: transparent;
-  border: 0px solid transparent;
-}
-
-#page-manager-edit .page-manager-edit-operations .inside {
-  border: 0px solid transparent;
-}
-
-#page-manager-edit .page-manager-edit-operations li {
-  background: transparent;
-  border: 0px solid transparent;
-}
-
-#page-manager-edit .page-manager-edit-operations li.changed,
-#page-manager-edit .page-manager-edit-operations li.changed-group .page-manager-group-title {
-  background-color: transparent;
-  border: 0px solid transparent;
-}
-
-#page-manager-edit table tr.even {
-  background-color: transparent;
-  border: 0px solid transparent;
-}
-
-#page-manager-edit .page-manager-ajax-pad {
-  background: transparent;
-  border-left: 1px solid #ddd;
-}
-
-#page-manager-edit .actions li a {
-  color: inherit;
-  background-color: transparent;
-  border: 0px solid transparent;
-}
-
-#page-manager-edit .page-manager-changed {
-  float: left;
-  /* LTR */
-  font-style: italic;
-  color: inherit;
-  padding-left: 1em;
-  padding-right: 22px;
-  background: none;
-  background-color: transparent;
-  border: 0px solid transparent;
-}
-
-/* =============================================================================
-   People
-   ========================================================================== */
-#permissions td.module {
-  background-color: #f5f5f5;
-  background-image: none;
-  font-weight: bold;
-}
-
-/* =============================================================================
-   Vertical tabs
-   ========================================================================== */
-div.vertical-tabs fieldset {
-  box-shadow: none;
-}
-
-.vertical-tabs:focus,
-ul.vertical-tabs-list:focus,
-li.selected:focus {
-  outline: 0px solid transparent;
-}
-
-.vertical-tabs details > .details-wrapper {
-  border: 1px solid transparent;
-  padding: 10px 20px;
-}
-
-.vertical-tabs-pane div.form-item {
-  display: block;
-}
-
-div.vertical-tabs ul li.vertical-tab-button a:hover,
-div.vertical-tabs ul li.vertical-tab-button a:focus {
-  background: #e9e9e9;
-  outline: 0px solid transparent;
-}
-
-/* =============================================================================
-   Views
-   ========================================================================== */
+/* VIEWS */
 .views-admin ul,
 .views-admin menu,
 .views-admin dir {
@@ -2506,82 +2343,44 @@ div.vertical-tabs ul li.vertical-tab-button a:focus {
   margin: 0;
 }
 
-.views-admin .icon,
-.views-admin .icon-text {
-  background-attachment: scroll;
-  background-image: url("../images/sprites.png");
-  background-position: left top;
-  /* LTR */
-  background-repeat: no-repeat;
-}
-
-.views-admin a.icon {
-  background-image: url("../images/sprites.png"), -moz-linear-gradient(-90deg, transparent 0px, transparent 100%);
-  background-image: url("../images/sprites.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(1, rgba(232, 232, 232, 0)));
-  background-image: url("../images/sprites.png"), -webkit-linear-gradient(-90deg, transparent 0px, transparent 100%);
-  background-repeat: no-repeat, repeat-y;
-  border: 0px solid transparent;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
-  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
-}
-
-.views-admin a.icon:hover {
-  border-color: transparent;
-  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0) inset;
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0) inset;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0) inset;
-}
-
-.views-admin a.icon:active {
-  border-color: transparent;
-}
-
-.views-admin .icon-text {
-  padding-left: 0;
-}
-
 .views-admin .icon.linked {
-  background-position: center -153px;
+  background-position: center -157px;
 }
 
 .views-admin .icon.unlinked {
-  background-position: center -195px;
+  background-position: center -199px;
 }
 
 .views-admin .icon.add {
-  background-position: center 0;
+  background-position: center 7px;
 }
 
 .views-admin a.icon.add {
-  background-position: center 0, left top;
+  background-position: center 7px, left top;
 }
 
 .views-admin .icon.delete {
-  background-position: center -52px;
+  background-position: center -56px;
 }
 
 .views-admin a.icon.delete {
-  background-position: center -52px, left top;
+  background-position: center -56px, left top;
 }
 
 .views-admin .icon.rearrange {
-  background-position: center -111px;
+  background-position: center -115px;
 }
 
 .views-admin a.icon.rearrange {
-  background-position: center -111px, left top;
+  background-position: center -115px, left top;
 }
 
 .views-displays .secondary a:hover > .icon.add {
-  background-position: center -25px;
+  background-position: center 7px;
 }
 
 .views-displays .secondary .open a:hover > .icon.add {
-  background-position: center 3px;
+  background-position: center 7px;
 }
 
 .form-item {
@@ -2688,11 +2487,22 @@ td.group-title {
 .views-display-top {
   background-color: transparent;
   border: 0px solid transparent;
-  padding: 0 0 1em;
+  padding: 0;
+  border-bottom: 1px solid #999;
+  margin-bottom: 1em;
+  height: 2.8em;
+}
+
+.ctools-button-processed {
+  font-size: 1em;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .views-display-top .ctools-button-processed {
-  font-size: 1em;
+  right: 0;
 }
 
 .views-display-top .secondary {
@@ -2708,12 +2518,13 @@ td.group-title {
 }
 
 ul#views-display-menu-tabs li {
-  padding: .25em .5em;
-  margin: 0 .25em 0 0;
+  padding: 0;
+  margin: 0 1em 0 0;
   color: #333333;
+  line-height: 2.5em;
   text-shadow: none;
   background-color: #3b3b3b;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .views-displays .secondary a {
@@ -2726,8 +2537,8 @@ ul#views-display-menu-tabs li {
 
 .views-displays ul.secondary li.active a.active.error,
 .views-displays .secondary a.error {
-  border: 1px solid #cb2026;
-  padding: 0px;
+  border: 0;
+  color: #cb2026;
 }
 
 .views-displays .secondary a:hover,
@@ -3100,84 +2911,257 @@ ul#views-display-menu-tabs li {
   margin: 1em 0;
 }
 
-/* =============================================================================
-   messages
-   ========================================================================== */
-div.messages {
-  background-position: 8px 8px;
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 2.4em;
+}
+
+ul#views-display-menu-tabs {
+  margin-top: .5em;
+}
+
+ul#views-display-menu-tabs li {
+  background-color: transparent;
+  color: #333333;
+  border-bottom: 4px solid transparent;
+  border-radius: 0;
+}
+
+.views-displays .secondary a {
+  color: #333333;
+}
+
+.views-displays .secondary .active a,
+.views-displays .secondary .active a:hover {
+  color: #333333;
+  border-bottom: 4px solid;
+  border-color: #f05724;
+}
+
+.views-displays .secondary .action-list {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.views-displays .secondary .action-list input.form-submit {
+  color: #333;
+  text-shadow: none;
+  font-weight: normal;
+}
+
+/* PANELS */
+.dashboard-content {
+  padding: 0;
+}
+
+.dashboard-title {
+  font-weight: 300;
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+
+.dashboard-entry .dashboard-link {
+  font-size: 120%;
+  font-weight: normal;
+}
+
+.ctools-button-processed {
+  border: 0;
+  background: transparent;
+}
+
+.ctools-button-processed li {
+  background: transparent;
+}
+
+/**
+ * Enlarge dropbutton arrow
+ */
+.ctools-twisty {
+  border-width: 6px 6px 0;
+}
+
+.ctools-dropbutton-processed.open .ctools-twisty {
+  border-bottom: 6px solid;
+  top: 0.3em;
+}
+
+.dashboard-block {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.panels-dashboard .links {
+  margin-top: 0;
+}
+
+div.dashboard-block {
+  /* panels dashboard, not dashboard */
+  padding: 0;
+  background: transparent;
+  border: 0px solid transparent;
+  margin-bottom: 0;
+}
+
+dl.page-manager-wizards {
+  background: url("../images/list-item.png?1377114396") no-repeat scroll 0 0 transparent;
+  margin: 0 0 1em;
+  padding: 0 0 0 2.5em;
+}
+
+dl.page-manager-wizards dt {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+dl.page-manager-wizards dd {
+  margin-left: 0;
+}
+
+#page-manager-edit .page-manager-wrapper,
+#page-manager-edit .page-manager-tabs,
+#page-manager-edit .page-manager-edit-operations ul,
+#page-manager-edit .page-manager-edit-operations ul li {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+#page-manager-edit .page-manager-edit-operations .inside {
+  border: 0px solid transparent;
+}
+
+#page-manager-edit .page-manager-edit-operations li {
+  background: transparent;
+  border: 0px solid transparent;
+}
+
+#page-manager-edit .page-manager-edit-operations li.changed,
+#page-manager-edit .page-manager-edit-operations li.changed-group .page-manager-group-title {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+#page-manager-edit table tr.even {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+#page-manager-edit .page-manager-ajax-pad {
+  background: transparent;
+  border-left: 1px solid #ddd;
+}
+
+#page-manager-edit .actions li a {
+  color: inherit;
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+#page-manager-edit .page-manager-changed {
+  float: left;
   /* LTR */
-  background-repeat: no-repeat;
-  border: 1px solid;
-  margin: 6px 0;
-  padding: 10px 10px 10px 40px;
-  /* LTR */
+  font-style: italic;
+  color: inherit;
+  padding-left: 1em;
+  padding-right: 22px;
+  background: none;
+  background-color: transparent;
+  border: 0px solid transparent;
 }
 
-div.status {
-  background-image: url(../images/success.svg);
-  border-color: #ddd;
-  border-left: 4px solid #82bb41;
-  /* ltr */
+/* MEDIA */
+/* Media - Field widget */
+.media-widget {
+  padding: 9px 0;
+  margin: 0 10px 10px 0;
 }
 
-div.status,
-.ok {
-  color: #333333;
+.media-widget:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
-div.status,
-table tr.ok {
-  background-color: #fff;
+.media-widget .form-item {
+  margin: 0;
+  padding-bottom: 0;
 }
 
-div.warning {
-  background-image: url(../images/warning.svg);
-  border-color: #ddd;
-  border-left: 4px solid #f79521;
-  /* ltr */
+.media-widget .preview {
+  background: #CCC;
+  min-height: 110px;
+  min-width: 110px;
+  margin-right: 10px;
+  border: 1px solid #CCC;
+  float: left;
 }
 
-div.warning,
-.warning {
-  color: #333333;
+.media-widget .preview .media-item {
+  margin: 0;
+  border: 0;
 }
 
-div.warning,
-table tr.warning {
-  background-color: #fff;
-  border-left: 4px solid #f79521;
-  /* ltr */
+.media-widget .button {
+  display: block;
 }
 
-div.error {
-  background-image: url(../images/error.svg);
-  border-color: #ddd;
-  border-left: 4px solid #cb2026;
-  /* ltr */
+/* Media - Media browser */
+#media-browser-tabset #branding {
+  padding: 10px 0 0 10px;
 }
 
-div.error,
-.error {
-  color: #333333;
+#media-browser-tabset ul.tabs.primary li {
+  margin-right: 0;
+  margin-left: .2em;
 }
 
-div.error,
-table tr.error {
-  background-color: #fff;
-  border-left: 4px solid #cb2026;
-  /* ltr */
+#media-browser-tabset ul.tabs.primary li a:link {
+  position: relative;
+  top: 1px;
+  font-size: 1.2em;
+  font-weight: normal;
+  padding: .5em 1em;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.06);
+  border: 0px solid rgba(0, 0, 0, 0);
+  color: #555;
+  vertical-align: text-bottom;
+  border-radius: 0;
 }
 
-/* =============================================================================
-   Workbench
-   ========================================================================== */
+#media-browser-tabset ul.tabs.primary li.ui-state-active a {
+  background: transparent;
+  border: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  color: #555555;
+}
+
+#media-browser-page .button {
+  margin: 1em .5em 1em 0;
+  min-width: 80px;
+  font-size: 1.1em;
+  color: #555555;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 2.2em;
+  margin-right: 0.5em;
+  padding: 6px 17px;
+  text-align: center;
+}
+
+/* WORKBENCH */
 div.admin.my-workbench .left,
 div.admin.my-workbench .right {
   margin: 0;
 }
 
 /* =============================================================================
-   Media queries
+
+   MEDIA QUERIES
+
    ========================================================================== */
 @media (max-width: 960px) {
   /* dashboard */
@@ -3290,7 +3274,7 @@ div.admin.my-workbench .right {
 
   /* vertical tabs */
   div.vertical-tabs {
-    background: url('../images/fc.png?1378301358') repeat-y scroll -97px 0 white;
+    background: url('../images/fc.png?1378579607') repeat-y scroll -97px 0 white;
     border: 1px solid #ddd;
   }
 
@@ -3332,7 +3316,9 @@ div.admin.my-workbench .right {
 }
 
 /* =============================================================================
-   Fade in on pageload
+
+   FADE IN ON PAGELOAD
+
    ========================================================================== */
 @-webkit-keyframes fadeIn {
   from {
