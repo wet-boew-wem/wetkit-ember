@@ -125,6 +125,9 @@ table tr.error {
 .form-submit {
   @extend %button-primary;
 }
+.form-item  {
+  margin-right: .25em;
+}
 #diff-inline-form select,
 div.filter-options select {
   padding:0;
@@ -136,13 +139,15 @@ div.filter-options select {
   background-position: right center;
   padding-right: 45px;
 }
-.form-item.form-type-select.form-item-operation {
- max-width: 300px;
+input[type="text"] {
+  max-width: 300px;
 }
+/*.form-item.form-type-select.form-item-operation {
+ max-width: 300px;
+}*/
 .machine-name-label {
   margin-left:10px;
 }
-
 
 /* ADMIN LISTS */
 
@@ -235,7 +240,6 @@ div.add-or-remove-shortcuts a:hover span.text {
   font-size: .9em;
   color: $color-text-title;
 }
-
 
 /* TABS */
 
@@ -348,7 +352,6 @@ ul.inline li {
 #secondary-links ul.links li a.active {
 }
 
-
 /* FIELDSET */
 
 .fieldset-legend  {
@@ -428,14 +431,14 @@ details > .details-wrapper,
 .exposed-filters .form-item {
   float: left; /* LTR */
   line-height:3.2em;
-  margin: 0 0 .5em 0;
+  margin-bottom: .5em;
 }
 .exposed-filters .form-item label {
   float: left; /* LTR */
   font-weight: normal;
   margin-right: 0.25em;
   width: inherit;
-  padding: 0 5px 0 0;
+  padding-right: 5px;
 }
 .exposed-filters .filters {
   float:none;
@@ -459,13 +462,9 @@ ul.current-filters li {
   margin: 1em 0;
   display: inline;
 }
-.exposed-filters .form-select {
-  margin:0;
-}
 .exposed-filters .form-item label {
-  padding: 0;
+  padding: .8em 0;
   line-height: normal;
-  padding-top: .7em;
 }
 div.exposed-filters div#edit-actions {
   float: left;
@@ -476,9 +475,6 @@ div.exposed-filters div#edit-actions .form-select {
 }
 .container-inline  {
   border:none;
-}
-.container-inline div, .container-inline label {
-  margin:0;
 }
 
 /* TIPS */
@@ -970,9 +966,6 @@ img.screenshot  {
 
 /* Ctools */
 
-#ctools-export-ui-list-form .form-submit {
-  margin-top:2em !important;
-}
 .ctools-button-processed {
   background-color: $color-background;;
   border: 1px solid #ddd;
@@ -1625,6 +1618,28 @@ dl.page-manager-wizards dd  {
   background: none;
   background-color: transparent;
   border: 0px solid transparent;
+}
+#page-manager-list-pages-form .form-select,
+#page-manager-list-pages-form input,
+#ctools-export-ui-list-form .form-select,
+#ctools-export-ui-list-form input {
+  display: inline-block;
+}
+#page-manager-list-pages-form .form-item,
+#ctools-export-ui-list-form .form-item {
+  padding-right: .25em;
+  float: none;
+  display: inline-block;
+}
+#edit-pages-apply,
+#edit-pages-reset,
+#ctools-export-ui-list-form .form-submit  {
+  margin-top: 0;
+  float: none;
+}
+body form#page-manager-list-pages-form,
+body form#ctools-export-ui-list-form  {
+  margin: 1em 0;
 }
 
 /* MEDIA */
