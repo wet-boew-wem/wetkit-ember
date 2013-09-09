@@ -15,3 +15,8 @@ pre,
 kbd {
   font-size: 1em;
 }
+
+.fade-in {
+  animation: inherit;
+  opacity: 1;
+}
