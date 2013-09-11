@@ -26,5 +26,7 @@ kbd {
 
 .fade-in {
   animation: inherit;
+  zoom: 1;
   opacity: 1;
+  filter: alpha(opacity=100);
 }
