@@ -38,6 +38,10 @@ ul.secondary {
     height: 20.9px;
     .language-toggle {
       float: right;
+      margin: 0px;
+      a {
+        color: #FFF;
+      }
     }
   }
 }
@@ -61,6 +65,7 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
 }
 
 #branding {
+  color: #FFF;
   background-color: #555555;
 }
 
