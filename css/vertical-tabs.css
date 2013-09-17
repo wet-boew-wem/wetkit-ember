@@ -95,6 +95,14 @@ div.vertical-tabs .vertical-tabs-panes {
   /* LTR */
 }
 
+div.vertical-tabs .vertical-tabs-panes legend {
+  display: none;
+}
+
+div.vertical-tabs .vertical-tabs-pane fieldset legend {
+  display: block;
+}
+
 .vertical-tabs-pane .fieldset-wrapper > div:first-child {
   padding-top: 5px;
 }
