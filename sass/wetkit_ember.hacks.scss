@@ -27,10 +27,14 @@ ul.primary {
 }
 
 ul.secondary {
-margin: 0 -3.1em;
-padding: .5em 3.5em;
-background-color: #3b3b3b;
-box-shadow: none;
+  margin: 0 -3.1em;
+  padding: .5em 3.5em;
+  background-color: #3b3b3b;
+  box-shadow: none;
+  height: 20.9px;
+  .language-toggle {
+    float: right;
+  }
 }
 
 .form-wrapper,

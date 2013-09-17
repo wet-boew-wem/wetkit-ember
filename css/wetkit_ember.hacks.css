@@ -25,6 +25,10 @@ ul.secondary {
   padding: .5em 3.5em;
   background-color: #3b3b3b;
   box-shadow: none;
+  height: 20.9px;
+}
+ul.secondary .language-toggle {
+  float: right;
 }
 
 .form-wrapper,
