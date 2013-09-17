@@ -25,9 +25,12 @@ ul.secondary {
   padding: .5em 3.5em;
   background-color: #3b3b3b;
   box-shadow: none;
+}
+
+#tab-bar ul.secondary {
   height: 20.9px;
 }
-ul.secondary .language-toggle {
+#tab-bar ul.secondary .language-toggle {
   float: right;
 }
 
