@@ -1,14 +1,10 @@
 name = WetKit Ember
+base theme = ember
 description = A responsive administration theme based on the Ember theme for Spark.
 package = WetKit
 core = 7.x
 
 ; Stylesheets
-;stylesheets[screen][] = css/wetkit_ember.hacks.css
-;stylesheets[screen][] = css/wetkit_ember.normalize.css
-;stylesheets[screen][] = css/wetkit_ember.styles.css
-;stylesheets[screen][] = styles/normalize.css
-stylesheets[screen][] = css/style.css
 stylesheets[screen][] = css/wetkit_ember.hacks.css
 
 ; Settings
