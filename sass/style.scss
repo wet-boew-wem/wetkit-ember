@@ -148,6 +148,9 @@ table tr.error {
 .form-submit {
   @extend %button-primary;
 }
+#edit-cancel {
+  background-color: #555;
+}
 .form-item  {
   margin-right: .25em;
 }
@@ -167,6 +170,16 @@ input[type="text"] {
 }
 .machine-name-label {
   margin-left:10px;
+}
+/* Animated throbber */
+html.js input.form-autocomplete {
+  background-position: 97% 10px; /* LTR */
+  background-size: 22px;
+  -webkit-transition: none;
+}
+html.js input.throbbing {
+  background-position: 97% -19px; /* LTR */
+  background-size: 22px;
 }
 .form-managed-file .form-file, .form-managed-file .form-submit {
   margin: 0;
@@ -259,6 +272,7 @@ div.add-or-remove-shortcuts a span.icon {
 div.add-shortcut a:focus span.icon,
 div.add-shortcut a:hover span.icon {
   background: transparent url("../images/shortcut.svg") no-repeat scroll 0 0;
+  -webkit-trnsition: all 1s;
 }
 div.remove-shortcut a span.icon {
   background: transparent url("../images/no_shortcut.svg") no-repeat scroll 0 0;
@@ -266,15 +280,17 @@ div.remove-shortcut a span.icon {
 div.remove-shortcut a:focus span.icon,
 div.remove-shortcut a:hover span.icon {
   background: transparent url("../images/no_shortcut.svg") no-repeat scroll 0 0;
+  -webkit-trnsition: all 1s;
 }
 div.add-or-remove-shortcuts a span.text  {
   padding-top: 8px;
 }
 div.add-or-remove-shortcuts a:focus span.text,
 div.add-or-remove-shortcuts a:hover span.text {
-  background-color: transparent;
+  background-color: inherit;
   font-size: .9em;
   color: $color-text-title;
+  -webkit-trnsition: all 1s;
 }
 
 /* TABS */
@@ -931,6 +947,9 @@ ol.task-list li.done {
     border:2px solid #999;
     padding: 0px;
 }
+.theme-selector .no-screenshot {
+    background: #ddd;
+}
 img.screenshot  {
   margin: 0;
 }
@@ -1000,16 +1019,15 @@ img.screenshot  {
    ========================================================================== */
 
 div#overlay {
-  min-width: 320px;
-  max-width: 960px;
+min-width: 320px;
+max-width: 960px;
 }
 
 #overlay #page {
-  padding: 2em;
+padding: 2em;
 }
 
 /* =============================================================================
-
 
    STYLES SPECIFIC TO CONTRIBUTED MODULES
    navbar, ctools, media, views, views UI, panels, panelizer, workbench
@@ -1026,6 +1044,14 @@ div#overlay {
   font-size: inherit;
   padding-bottom: 0;
   padding-top: 0;
+}
+.ctools-button-processed input {
+  color: $color-link;
+  text-shadow: none;
+}
+.ctools-button-processed input:hover {
+  color: $color-link;
+  text-shadow: none;
 }
 .ctools-button-processed li {
   line-height: 1em;
@@ -1116,13 +1142,16 @@ div#overlay {
 .views-admin a.icon.rearrange {
   background-position: center -115px, left top;
 }
+.views-admin span.icon {
+  float: none;
+}
 .views-displays .secondary a:hover > .icon.add {
   background-position: center 7px;
 }
 .views-displays .secondary .open a:hover > .icon.add {
   background-position: center 7px;
 }
-.form-item {
+/*.form-item {
   margin-top: 0;
 }
 .form-type-checkbox {
@@ -1130,7 +1159,7 @@ div#overlay {
 }
 .container-inline {
   padding-top: 0;
-}
+}*/
 .views-admin fieldset fieldset.container-inline {
   margin-bottom: 0;
   margin-top: 0;
@@ -1302,6 +1331,10 @@ ul#views-display-menu-tabs li {
   height: inherit;
   margin-right: 0;
 }
+#views-ui-preview-form .form-type-textfield .description {
+  white-space: normal;
+  max-width: 300px;
+}
 .views-ui-display-tab-bucket {
   border: 0px solid transparent;
   line-height: inherit;
@@ -1458,8 +1491,9 @@ ul#views-display-menu-tabs li {
 }
 .views-ui-dialog .form-buttons {
   background-color: #F3F4EE;
-  position: relative;
-  bottom: 1.5em;
+  padding: 1.5em 2em;
+  position: absolute;
+  bottom: 0;
   width: 100%;
 }
 .form-type-checkboxes #edit-options-value,
@@ -1539,7 +1573,10 @@ ul#views-display-menu-tabs li {
 #edit-options-exception.collapsible {
   margin-top: 0;
 }
-
+/* Hide the drupal system throbber image */
+.ajax-progress .throbber {
+  display: none;
+}
 #views-ajax-body form {
   margin: 1em 0;
 }
@@ -1565,11 +1602,17 @@ ul#views-display-menu-tabs li  {
   border-color: $color-link-alternate;
 }
 .views-displays .secondary .action-list {
-background: #fff;
-border: 1px solid #ddd;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: .5em;
+}
+.action-list input.form-submit {
+  color: $color-link;
+  padding: 0;
+  margin: 0;
 }
 .views-displays .secondary .action-list input.form-submit {
-  color: #333;
+  color: $color-text;
   text-shadow: none;
   font-weight: normal;
 }
@@ -1590,7 +1633,7 @@ border: 1px solid #ddd;
 }
 .ctools-button-processed {
   border:0;
-  background: transparent;
+  background: $color-background;
 }
 .ctools-button-processed li {
   background: transparent;
@@ -1600,6 +1643,7 @@ border: 1px solid #ddd;
  */
 .ctools-twisty {
   border-width: 6px 6px 0;
+  right: 4px;
 }
 .ctools-dropbutton-processed.open .ctools-twisty {
   border-bottom: 6px solid;
@@ -1730,6 +1774,36 @@ body form#ctools-export-ui-list-form  {
 .media-widget .button {
   display: block;
 }
+.media-thumbnails-select {
+  float: left;
+  margin: 1em 0;
+  clear: both;
+}
+#media-browser-library-list {
+  clear: both;
+  float: left;
+}
+.media-list-thumbnails .form-type-checkbox {
+  bottom: 138px;
+  left: 2px;
+}
+.media-list-thumbnails img,
+.media-list-thumbnails label {
+  margin: 0;
+}
+.media-item .label-wrapper {
+  text-align: left;
+  bottom: 0;
+  left: 5px;
+  margin: 0;
+  width: 90%;
+  overflow: hidden;
+}
+.media-item {
+  background: #eee;
+  border: 1px solid #CCCCCC;
+  padding: 18px;
+}
 
 /* Media - Media browser */
 
@@ -1778,6 +1852,12 @@ body form#ctools-export-ui-list-form  {
 div.admin.my-workbench .left,
 div.admin.my-workbench .right {
   margin: 0;
+}
+
+/* FEATURES */
+
+form div.buttons {
+  text-align: left;
 }
 
 /* =============================================================================
