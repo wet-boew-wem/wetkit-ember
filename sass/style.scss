@@ -49,7 +49,7 @@ textarea {
 }
 fieldset {
   border: 0px solid transparent;
-  margin: 0em;
+  margin: 1em 0;
   padding: 0em;
 }
 tr,
@@ -617,7 +617,6 @@ tr td:last-child {
   border-right:none; /* LTR */
 }
 
-
 /* VERTICAL TABS */
 
 div.vertical-tabs fieldset {
@@ -716,7 +715,6 @@ div#overlay {
 .overlay #content {
   padding: 0;
 }
-
 
 /* =============================================================================
 
@@ -997,6 +995,22 @@ img.screenshot  {
 
 /* =============================================================================
 
+   STYLING SPECIFIC TO OVERLAY
+
+   ========================================================================== */
+
+div#overlay {
+  min-width: 320px;
+  max-width: 960px;
+}
+
+#overlay #page {
+  padding: 2em;
+}
+
+/* =============================================================================
+
+
    STYLES SPECIFIC TO CONTRIBUTED MODULES
    navbar, ctools, media, views, views UI, panels, panelizer, workbench
 
@@ -1113,10 +1127,6 @@ img.screenshot  {
 }
 .form-type-checkbox {
   margin-top: 0;
-}
-.form-submit:not(.js-hide) + .form-submit,
-.views-admin a.button:not(.js-hide) + a.button {
-  margin-left: 0;
 }
 .container-inline {
   padding-top: 0;
@@ -1406,6 +1416,7 @@ ul#views-display-menu-tabs li {
 }
 .views-ui-dialog .views-override {
   padding: 0 2em 1em;
+  border-bottom: 1px solid #ccc;
 }
 .views-ui-dialog .views-override > * {
   margin: 0;
@@ -1417,6 +1428,9 @@ ul#views-display-menu-tabs li {
   margin: 0;
   background: $color-background-dark;
   color: $color-text-light;
+}
+.views-ui-dialog fieldset .form-item {
+  margin: .5em 1em;
 }
 .views-ui-dialog #views-progress-indicator {
   font-size: inherit;
@@ -1432,18 +1446,22 @@ ul#views-display-menu-tabs li {
 .views-ui-dialog .scroll {
   border: 1px solid #CCC;
   border-width: 0;
-  padding: 1em 2em;
+  padding: 1em 2em 3em;
 }
 .views-ui-dialog fieldset .item-list {
   padding-left: 2em;
 }
+.views-ui-dialog #edit-options {
+  float: none;
+  display: block;
+  width: auto;
+}
 .views-ui-dialog .form-buttons {
   background-color: #F3F4EE;
-  padding: 1em 2em;
-}
-.views-ui-dialog .form-buttons input {
-  margin-bottom: 0;
-  margin-right: 0;
+  padding: 1.5em 2em;
+  position: relative;
+  bottom: 1.5em;
+  width: 100%;
 }
 .form-type-checkboxes #edit-options-value,
 .form-type-checkboxes #edit-options-validate-options-node-types {
@@ -1522,10 +1540,7 @@ ul#views-display-menu-tabs li {
 #edit-options-exception.collapsible {
   margin-top: 0;
 }
-/* Show the drupal system throbber image */
-.ajax-progress .throbber {
-  display: block;
-}
+
 #views-ajax-body form {
   margin: 1em 0;
 }
@@ -1795,8 +1810,15 @@ div.admin.my-workbench .right {
 
 @media (max-width: 480px) {
 
-  #page {
-    margin: 2em 1.25em 1.25em;
+  #overlay #page {
+    margin: 0;
+    padding: 1em;
+  }
+  #overlay  {
+    padding: 1em;
+  }
+  div#overlay {
+    width:100%;
   }
   body.admin-expanded {
     margin-left: 0;
