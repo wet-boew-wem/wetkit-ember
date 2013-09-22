@@ -1,9 +1,17 @@
 <?php
 
 /**
+ * @file
+ * Main template file for the WetKit Ember theme.
+ */
+
+
+/**
  * Override or insert variables into the page template.
  */
 function wetkit_ember_preprocess_page(&$vars) {
+  $theme_prefix = '';
+
   // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
   if (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'base';
