@@ -1,3 +1,7 @@
+/* =============================================================================
+   System
+   ========================================================================== */
+
 .breadcrumb {
   span {
     font-size: 1.1em;
@@ -27,7 +31,7 @@ ul.primary {
 }
 
 ul.secondary {
-  margin: 0 -3.1em;
+  margin: 0 -3.1em 0 -3.5em;
   padding: .5em 3.5em;
   background-color: #3b3b3b;
   box-shadow: none;
@@ -46,16 +50,6 @@ ul.secondary {
   }
 }
 
-.form-wrapper,
-.container-inline {
-  margin-bottom: 2em;
-}
-
-.form-wrapper .fieldset-wrapper
-.container-inline .fieldset-wrapper {
-  padding: 2em 2em 0em 2em;
-}
-
 div.vertical-tabs .vertical-tabs-panes .vertical-tabs-pane fieldset {
   padding: 2.5em 1.5em;
 }
@@ -69,44 +63,8 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
   background-color: #555555;
 }
 
-.media-browser-tab {
-  padding: 1.5em;
-}
-
-#media-browser-tabset ul.tabs.primary li a:link {
- color: #FFF;
-}
-
-#media-browser-tabset #media-tabs-wrapper ul.tabs.primary li a{
-  background-color: #008fdc;
-}
-
-#media-browser-tabset #media-tabs-wrapper ul.tabs.primary li a:hover{
-  background-color: #FFF;
-  color: #000;
-}
-
-#media-browser-tabset #branding {
-  background-color: #000;
-  padding-bottom: 0.5em;
-}
-
-#media-browser-tabset #branding h1 {
-  height: auto;
-}
-
 .form-managed-file .form-file {
   margin-bottom: 1em;
-}
-
-.views-displays .secondary .active a, .views-displays .secondary .active a:hover {
-  border-color: #008fdc;
-}
-
-.views-ui-display-tab-actions .ctools-button-processed input {
-  color: #008fdc;
-  text-shadow: none;
-  font-weight: normal;
 }
 
 .theme-default h3 {

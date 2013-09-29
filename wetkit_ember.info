@@ -5,7 +5,7 @@ package = WetKit
 core = 7.x
 
 ; Stylesheets
-stylesheets[screen][] = css/wetkit_ember.hacks.css
+stylesheets[screen][] = css/wetkit_ember.styles.css
 
 ; Settings
 settings[shortcut_module_link] = 1
