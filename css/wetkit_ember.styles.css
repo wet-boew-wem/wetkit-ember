@@ -90,6 +90,16 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
   color: #008fdc;
 }
 
+.views-ui-dialog .form-buttons {
+  padding: 1.5em 0em;
+}
+.views-ui-dialog #edit-cancel {
+  margin: 0em 1em;
+}
+.views-ui-dialog #edit-submit {
+  margin: 0em 1em;
+}
+
 /* =============================================================================
    Views
    ========================================================================== */

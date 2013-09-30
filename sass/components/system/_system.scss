@@ -70,3 +70,15 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
 .theme-default h3 {
   color: #008fdc;
 }
+
+.views-ui-dialog {
+  .form-buttons {
+    padding: 1.5em 0em;
+  }
+  #edit-cancel {
+    margin: 0em 1em;
+  }
+  #edit-submit {
+    margin: 0em 1em;
+  }
+}
