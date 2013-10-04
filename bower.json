@@ -2,10 +2,6 @@
   "name": "wetkit_ember",
   "version": "1.0.0",
   "dependencies": {
-    "respond": "fubhy/respond",
-    "selectivizr": "fubhy/selectivizr",
-    "html5shiv": "fubhy/html5shiv",
-    "matchmedia": "fubhy/matchmedia",
-    "pie": "fubhy/pie"
+    "pace": "HubSpot/pace"
   }
 }
