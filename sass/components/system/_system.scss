@@ -82,3 +82,16 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
     margin: 0em 1em;
   }
 }
+
+// See: https://gist.github.com/joaocunha/6273016
+select {
+  -moz-appearance: none;
+  -webkit-appearnace: none;
+  text-indent: .01px;
+  text-overflow: '';
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
