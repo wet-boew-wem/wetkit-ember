@@ -1,32 +1,42 @@
 /* =============================================================================
    Media
    ========================================================================== */
-#media-browser-tabset .media-browser-tab {
+#media-browser-page-wrapper {
+  border: 1px solid #000;
+}
+#media-browser-page-wrapper #media-browser-tabset .media-browser-tab {
   padding: 1.25em;
 }
-#media-browser-tabset #branding {
+#media-browser-page-wrapper #media-browser-tabset #branding {
   background-color: #555555;
   padding-bottom: 0.5em;
 }
-#media-browser-tabset #branding h1 {
+#media-browser-page-wrapper #media-browser-tabset #branding h1 {
   height: auto;
 }
-#media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary {
+#media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary {
   margin: 1em 0em;
 }
-#media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li {
+#media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li {
   padding: 0 1em 0 0;
 }
-#media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li.ui-state-active a {
+#media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li.ui-state-active a {
   border-color: #008fdc;
 }
-#media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li a:hover {
+#media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li a:hover {
   border-bottom: 4px solid #ffffff;
 }
-#media-browser-tabset ul.tabs.primary li a:link {
+#media-browser-page-wrapper #media-browser-tabset ul.tabs.primary li a:link {
   color: #FFF;
   padding-bottom: 5px;
   font-size: 1.25em;
+}
+
+/* =============================================================================
+   Module Filter
+   ========================================================================== */
+#module-filter-squeeze table {
+  clear: none;
 }
 
 /* =============================================================================
@@ -124,4 +134,12 @@ select::-ms-expand {
   color: #008fdc;
   text-shadow: none;
   font-weight: normal;
+}
+
+/* =============================================================================
+   WetKit
+   ========================================================================== */
+.wxt-message {
+  margin-left: 15px;
+  margin-right: 15px;
 }
