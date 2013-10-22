@@ -123,6 +123,11 @@ select::-ms-expand {
   display: none;
 }
 
+.form-select {
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
 /* =============================================================================
    Views
    ========================================================================== */
