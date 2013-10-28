@@ -29,8 +29,7 @@ function wetkit_ember_preprocess_html(&$variables) {
       ),
       'weight' => 999,
       'preprocess' => FALSE,
-    )
-  );
+    ));
 
   // Add conditional CSS for IE7 and below.
   drupal_add_css(path_to_theme() . '/css/ie/ie7.css',
@@ -42,8 +41,7 @@ function wetkit_ember_preprocess_html(&$variables) {
       ),
       'weight' => 999,
       'preprocess' => FALSE,
-    )
-  );
+    ));
 
   // Add conditional CSS for IE6.
   drupal_add_css(path_to_theme() . '/css/ie/ie6.css',
@@ -55,8 +53,7 @@ function wetkit_ember_preprocess_html(&$variables) {
       ),
       'weight' => 999,
       'preprocess' => FALSE,
-    )
-  );
+    ));
 }
 
 /**
