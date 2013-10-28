@@ -9,32 +9,54 @@
 /**
  * Override or insert variables into the page template.
  */
-function wetkit_ember_preprocess_page(&$vars) {
-  $theme_prefix = '';
-
-  // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
-  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
-    $theme_prefix = 'base';
-  }
-  else {
-    $theme_prefix = 'gcwu';
-  }
-
+function wetkit_ember_preprocess_page(&$variables) {
   if (module_exists('wetkit_language')) {
-    $vars['lang_bar'] = '<div class="breadcrumb-side"><ul><li>' . $vars['menu_lang_bar'] . '</li></ul></div>';
+    $variables['lang_bar'] = '<div class="breadcrumb-side"><ul><li>' . $variables['menu_lang_bar'] . '</li></ul></div>';
   }
 }
 
 /**
  * Override or insert variables into the html template.
  */
-function wetkit_ember_preprocess_html(&$vars) {
+function wetkit_ember_preprocess_html(&$variables) {
   // Add conditional CSS for IE8 and below.
-  drupal_add_css(path_to_theme() . '/css/ie/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie/ie.css',
+    array(
+      'group' => CSS_THEME,
+      'browsers' => array(
+        'IE' => 'lte IE 9',
+        '!IE' => FALSE,
+      ),
+      'weight' => 999,
+      'preprocess' => FALSE,
+    ),
+  );
+
   // Add conditional CSS for IE7 and below.
-  drupal_add_css(path_to_theme() . '/css/ie/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie/ie7.css',
+    array(
+      'group' => CSS_THEME,
+      'browsers' => array(
+        'IE' => 'lte IE 7',
+        '!IE' => FALSE,
+      ),
+      'weight' => 999,
+      'preprocess' => FALSE,
+    ),
+  );
+
   // Add conditional CSS for IE6.
-  drupal_add_css(path_to_theme() . '/css/ie/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 6', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie/ie6.css',
+    array(
+      'group' => CSS_THEME,
+      'browsers' => array(
+        'IE' => 'lte IE 6',
+        '!IE' => FALSE,
+      ),
+      'weight' => 999,
+      'preprocess' => FALSE,
+    ),
+  );
 }
 
 /**
