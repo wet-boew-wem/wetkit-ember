@@ -29,7 +29,7 @@ function wetkit_ember_preprocess_html(&$variables) {
       ),
       'weight' => 999,
       'preprocess' => FALSE,
-    ),
+    )
   );
 
   // Add conditional CSS for IE7 and below.
@@ -42,7 +42,7 @@ function wetkit_ember_preprocess_html(&$variables) {
       ),
       'weight' => 999,
       'preprocess' => FALSE,
-    ),
+    )
   );
 
   // Add conditional CSS for IE6.
@@ -55,7 +55,7 @@ function wetkit_ember_preprocess_html(&$variables) {
       ),
       'weight' => 999,
       'preprocess' => FALSE,
-    ),
+    )
   );
 }
 
