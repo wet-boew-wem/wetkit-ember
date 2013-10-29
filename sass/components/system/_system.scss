@@ -9,19 +9,15 @@
   margin-bottom: 1em;
 }
 
-ul.primary {
+.primary {
   li {
-    a:hover {
-      border-color: #ffffff;
-    }
-    &.active {
-      a {
-        border-color: #008fdc;
-      }
-      a:hover {
-        border-bottom: 4px solid #ffffff;
-      }
-    }
+    margin-bottom: 1em;
+  }
+  > [class*="active"] {
+    border-color: #008fdc;
+  }
+  > li:hover {
+    border-color: #ffffff;
   }
 }
 
@@ -83,19 +79,23 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
   }
 }
 
-// See: https://gist.github.com/joaocunha/6273016
-select {
-  -moz-appearance: none;
-  -webkit-appearnace: none;
-  text-indent: .01px;
-  text-overflow: '';
+fieldset.collapsible .fieldset-legend:after {
+  color: #008fdc;
+}
 
-  &::-ms-expand {
-    display: none;
+.form-select {
+  &,
+  &:focus,
+  &:active {
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  &[multiple='multiple'] {
+    background-image: none;
   }
 }
 
-.form-select  {
-  background-repeat: no-repeat;
-  background-position: right center;
+table.sticky-header {
+  position:relative !important;
 }

@@ -5,31 +5,16 @@
   border: 1px solid #000;
 }
 #media-browser-page-wrapper #media-browser-tabset .media-browser-tab {
-  padding: 1.25em;
+  padding: 1em;
 }
 #media-browser-page-wrapper #media-browser-tabset #branding {
   background-color: #555555;
-  padding-bottom: 0.5em;
 }
 #media-browser-page-wrapper #media-browser-tabset #branding h1 {
   height: auto;
 }
 #media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary {
   margin: 1em 0em;
-}
-#media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li {
-  padding: 0 1em 0 0;
-}
-#media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li.ui-state-active a {
-  border-color: #008fdc;
-}
-#media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary li a:hover {
-  border-bottom: 4px solid #ffffff;
-}
-#media-browser-page-wrapper #media-browser-tabset ul.tabs.primary li a:link {
-  color: #FFF;
-  padding-bottom: 5px;
-  font-size: 1.25em;
 }
 
 /* =============================================================================
@@ -49,14 +34,14 @@
   font-size: 1.1em;
 }
 
-ul.primary li a:hover {
-  border-color: #ffffff;
+.primary li {
+  margin-bottom: 1em;
 }
-ul.primary li.active a {
+.primary > [class*="active"] {
   border-color: #008fdc;
 }
-ul.primary li.active a:hover {
-  border-bottom: 4px solid #ffffff;
+.primary > li:hover {
+  border-color: #ffffff;
 }
 
 .tabs.primary {
@@ -113,19 +98,20 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
   margin: 0em 1em;
 }
 
-select {
-  -moz-appearance: none;
-  -webkit-appearnace: none;
-  text-indent: .01px;
-  text-overflow: '';
-}
-select::-ms-expand {
-  display: none;
+fieldset.collapsible .fieldset-legend:after {
+  color: #008fdc;
 }
 
-.form-select {
+.form-select, .form-select:focus, .form-select:active {
   background-repeat: no-repeat;
   background-position: right center;
+}
+.form-select[multiple='multiple'] {
+  background-image: none;
+}
+
+table.sticky-header {
+  position: relative !important;
 }
 
 /* =============================================================================
@@ -137,8 +123,6 @@ select::-ms-expand {
 
 .views-ui-display-tab-actions .ctools-button-processed input {
   color: #008fdc;
-  text-shadow: none;
-  font-weight: normal;
 }
 
 /* =============================================================================

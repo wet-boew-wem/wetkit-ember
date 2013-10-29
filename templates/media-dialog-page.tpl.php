@@ -71,25 +71,29 @@
   hide($page['content']['system_main']['tabset']['tabs']['#secondary']);
 ?>
 
-<?php if (isset($messages)) { print $messages; } ?>
 <div id="media-browser-page-wrapper">
   <div id="media-browser-page">
     <div id="media-browser-tabset">
       <div id="branding" class="clearfix">
-        <div>
-          <h1><?php print render($page['content']['system_main']['title']); ?></h1>
-        </div>
+        <h1 class="page-title"><?php print render($page['content']['system_main']['title']); ?></h1>
         <div id="media-tabs-wrapper">
           <?php print render($page['content']['system_main']['tabset']['tabs']); ?>
         </div>
       </div>
-      <?php print render($page['content']['system_main']['tabset']['panes']); ?>
-    </div> <!-- /#media-tabs-set -->
-  </div> <!--  /#media-browser-page -->
-</div> <!-- /#media-browser-page-wrapper -->
 
-<?php
-  hide($page['content']['system_main']['tabset']);
-  hide($page['content']['system_main']['title']);
-  print render($page['content']);
-?>
+      <div id="page"<?php echo theme_get_setting('ember_no_fadein_effect') ? '' : ' class="fade-in"'?>>
+
+        <?php if ($messages): ?>
+          <div id="console" class="clearfix">
+            <?php print $messages; ?>
+          </div>
+        <?php endif; ?>
+
+        <div id="content" class="clearfix">
+          <?php print render($page['content']['system_main']['tabset']['panes']); ?>
+          <?php print render($page['content']); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

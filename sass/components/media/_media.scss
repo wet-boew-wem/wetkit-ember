@@ -6,38 +6,17 @@
   border: 1px solid #000;
   #media-browser-tabset {
     .media-browser-tab {
-      padding: 1.25em;
+      padding: 1em;
     }
     #branding {
       background-color: #555555;
-      padding-bottom: 0.5em;
       h1 {
         height: auto;
       }
       #media-tabs-wrapper {
         ul.tabs.primary {
           margin: 1em 0em;
-          li {
-            padding: 0 1em 0 0;
-            &.ui-state-active {
-              a {
-                border-color: #008fdc;
-              }
-            }
-            a {
-              &:hover {
-                  border-bottom: 4px solid #ffffff;
-              }
-            }
-          }
         }
-      }
-    }
-    ul.tabs.primary {
-      li a:link {
-        color: #FFF;
-        padding-bottom: 5px;
-        font-size: 1.25em;
       }
     }
   }
