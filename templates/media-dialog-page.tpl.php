@@ -80,18 +80,19 @@
           <?php print render($page['content']['system_main']['tabset']['tabs']); ?>
         </div>
       </div>
-
       <div id="page"<?php echo theme_get_setting('ember_no_fadein_effect') ? '' : ' class="fade-in"'?>>
-
         <?php if ($messages): ?>
           <div id="console" class="clearfix">
             <?php print $messages; ?>
           </div>
         <?php endif; ?>
-
         <div id="content" class="clearfix">
           <?php print render($page['content']['system_main']['tabset']['panes']); ?>
-          <?php print render($page['content']); ?>
+          <?php
+            hide($page['content']['system_main']['tabset']);
+            hide($page['content']['system_main']['title']);
+            print render($page['content']);
+          ?>
         </div>
       </div>
     </div>
