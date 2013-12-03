@@ -25,3 +25,19 @@ ul {
     margin-left: 0.5em;
   }
 }
+
+.form-item-name,
+.form-item-uid {
+  .description {
+    display: none;
+  }
+}
+
+#block-system-main {
+  .fieldset-wrapper {
+    .form-item-filters-per-page,
+    .form-item-filters-types {
+      overflow: hidden;
+    }
+  }
+}

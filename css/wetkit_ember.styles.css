@@ -17,6 +17,16 @@ ul.action-links {
   margin-left: 0.5em;
 }
 
+.form-item-name .description,
+.form-item-uid .description {
+  display: none;
+}
+
+#block-system-main .fieldset-wrapper .form-item-filters-per-page,
+#block-system-main .fieldset-wrapper .form-item-filters-types {
+  overflow: hidden;
+}
+
 /* =============================================================================
    Media
    ========================================================================== */
