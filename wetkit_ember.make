@@ -8,5 +8,5 @@ api = 2
 projects[ember][version] = 2.x-dev
 projects[ember][type] = theme
 projects[ember][download][type] = git
-projects[ember][download][revision] = 5b8b0f6
+projects[ember][download][revision] = eb75425
 projects[ember][download][branch] = 7.x-2.x
