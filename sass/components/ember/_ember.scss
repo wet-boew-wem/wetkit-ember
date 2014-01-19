@@ -41,3 +41,32 @@ ul {
     }
   }
 }
+
+fieldset {
+  &.collapsible {
+    .fieldset-legend {
+      &:before {
+        [dir="ltr"] & {
+          float: left;
+          margin-left: -1.2em;
+          border-color: transparent #008fdc #008fdc transparent;
+        }
+        [dir="rtl"] & {
+          float: right;
+          margin-right: -1.2em;
+          border-color: transparent transparent #008fdc #008fdc;
+        }
+      }
+    }
+  }
+}
+
+.page-admin-structure-views {
+  .ui-widget-overlay {
+    position: fixed;
+  }
+}
+
+.drag .tabledrag-handle, .tabledrag-handle:hover, .tabledrag-handle:active, .tabledrag-handle:focus {
+  color: #008fdc;
+}

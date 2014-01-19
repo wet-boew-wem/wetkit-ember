@@ -27,6 +27,25 @@ ul.action-links {
   overflow: hidden;
 }
 
+[dir="ltr"] fieldset.collapsible .fieldset-legend:before {
+  float: left;
+  margin-left: -1.2em;
+  border-color: transparent #008fdc #008fdc transparent;
+}
+[dir="rtl"] fieldset.collapsible .fieldset-legend:before {
+  float: right;
+  margin-right: -1.2em;
+  border-color: transparent transparent #008fdc #008fdc;
+}
+
+.page-admin-structure-views .ui-widget-overlay {
+  position: fixed;
+}
+
+.drag .tabledrag-handle, .tabledrag-handle:hover, .tabledrag-handle:active, .tabledrag-handle:focus {
+  color: #008fdc;
+}
+
 /* =============================================================================
    Media
    ========================================================================== */
