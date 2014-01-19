@@ -88,3 +88,24 @@ fieldset {
 #views-ui-preview-form > div > div#preview-submit-wrapper {
   margin: 0em .5em 0 0;
 }
+
+/* Animated throbber */
+html.js {
+  .form-autocomplete {
+    background-image: url(../images/throbber-inactive.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+  }
+  &[dir="ltr"] {
+    .form-autocomplete {
+        background-position: 100% center; /* LTR */
+    }
+  }
+  &[dir="ltr"] {
+    .throbbing {
+      background: transparent url(../images/throbber-active.gif) no-repeat 0px center;
+      display: inline;
+      background-position: 100% center; /* LTR */
+    }
+  }
+}
