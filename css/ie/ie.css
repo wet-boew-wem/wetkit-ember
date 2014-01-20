@@ -22,3 +22,26 @@ kbd {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+
+.form-type-select {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+.form-type-select select {
+  z-index: 1;
+}
+
+.form-type-select:before {
+  display: block;
+  position: absolute;
+  content: '';
+  right: 45px;
+  top: 5px;
+  height: 1.7em;
+  width: 2em;
+  margin: 2px;
+  background: #FFF;
+  z-index: 5;
+}
