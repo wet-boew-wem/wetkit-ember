@@ -15,7 +15,11 @@
   </div>
 
   <div id="page"<?php echo theme_get_setting('ember_no_fadein_effect') ? '' : ' class="fade-in"'?>>
-  <?php print $breadcrumb; ?>
+
+  <?php if (!empty($breadcrumb)): ?>
+    <?php print $breadcrumb; ?>
+  <?php endif; ?>
+
   <?php if ($page['help']): ?>
     <?php print render($page['help']); ?>
   <?php endif; ?>
