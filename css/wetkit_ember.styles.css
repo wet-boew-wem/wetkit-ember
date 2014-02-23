@@ -89,6 +89,12 @@ html.js[dir="ltr"] .throbbing {
   border-top: none;
 }
 
+.ui-dialog-titlebar .ui-icon-closethick {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
 .media-wrapper
 .ui-dialog-titlebar {
   background-color: #2fa6e5;
