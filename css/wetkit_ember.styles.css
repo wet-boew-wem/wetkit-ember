@@ -81,6 +81,39 @@ html.js[dir="ltr"] .throbbing {
   /* LTR */
 }
 
+.page-node-edit .ui-widget-overlay {
+  position: fixed;
+}
+
+.page-media-browser #media-browser-page-wrapper {
+  border-top: none;
+}
+
+.media-wrapper
+.ui-dialog-titlebar {
+  background-color: #2fa6e5;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  padding-left: 30px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.media-wrapper
+.ui-dialog-titlebar .ui-icon-closethick {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.media-wrapper
+.ui-dialog .ui-dialog-titlebar-close {
+  right: .6em;
+}
+
 /* =============================================================================
    Media
    ========================================================================== */
@@ -208,8 +241,15 @@ table.sticky-header {
   background: #2fa6e5;
 }
 
+.views-ui-dialog .form-wrapper fieldset {
+  padding-left: 1.5em;
+}
 .views-ui-dialog .form-wrapper .collapsed {
   height: auto;
+  margin-bottom: 0em;
+}
+.views-ui-dialog .form-wrapper .collapsed legend {
+  margin-bottom: 0px;
 }
 
 /* =============================================================================

@@ -14,6 +14,15 @@
   background: #2fa6e5;
 }
 
-.views-ui-dialog .form-wrapper .collapsed {
-  height: auto;
+.views-ui-dialog .form-wrapper {
+  fieldset {
+    padding-left: 1.5em;
+  }
+  .collapsed {
+    height: auto;
+    margin-bottom: 0em;
+    legend {
+      margin-bottom: 0px;
+    }
+  }
 }
