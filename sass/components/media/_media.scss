@@ -3,7 +3,6 @@
    ========================================================================== */
 
 #media-browser-page-wrapper {
-  border: 1px solid #000;
   #media-browser-tabset {
     .media-browser-tab {
       padding: 1em;
@@ -20,4 +19,18 @@
       }
     }
   }
+}
+
+.media-wrapper
+.ui-dialog-titlebar {
+  background-color: #2fa6e5;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.media-wrapper
+.ui-dialog .ui-dialog-titlebar-close {
+  right: .6em;
 }

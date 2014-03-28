@@ -26,3 +26,45 @@
     }
   }
 }
+
+.views-ui-dialog {
+  .form-buttons {
+    padding: 1.5em 0em;
+  }
+  #edit-cancel {
+    margin: 0em 1em;
+  }
+  #edit-submit {
+    margin: 0em 1em;
+  }
+}
+
+.views-exposed-form {
+  .views-exposed-widget {
+    overflow: hidden;
+  }
+}
+
+.views-ui-dialog #edit-selected {
+  display: block;
+  position: relative;
+  padding: 0px 16px 30px 30px;
+}
+
+.views-ui-dialog .scroll {
+  padding: 0em 2em 3em;
+}
+
+.views-ui-dialog #views-filterable-options-controls {
+  padding-top: 0px;
+}
+
+#views-ui-preview-form > div > div#preview-submit-wrapper {
+  margin: 0em .5em 0 0;
+}
+
+.page-admin-structure-views {
+  .ui-widget-overlay {
+    position: fixed;
+  }
+}

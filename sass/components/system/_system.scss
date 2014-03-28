@@ -63,15 +63,18 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
   color: #008fdc;
 }
 
-.views-ui-dialog {
-  .form-buttons {
-    padding: 1.5em 0em;
+.page-node-edit {
+  .ui-widget-overlay {
+    position: fixed;
   }
-  #edit-cancel {
-    margin: 0em 1em;
-  }
-  #edit-submit {
-    margin: 0em 1em;
+}
+
+.page-node-add,
+.page-node-edit {
+  h1 {
+    &#wb-cont {
+      margin-top: 0px;
+    }
   }
 }
 

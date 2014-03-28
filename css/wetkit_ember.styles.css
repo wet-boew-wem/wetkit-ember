@@ -1,30 +1,37 @@
 /* =============================================================================
-   Ember
+   CTools
    ========================================================================== */
 .ctools-content ul {
   padding-left: 0px;
 }
 
-.views-exposed-form .views-exposed-widget {
-  overflow: hidden;
+.ctools-collapsible-container .ctools-collapsible-handle {
+  background: #CCC;
+}
+
+/* =============================================================================
+   Ember
+   ========================================================================== */
+h1 {
+  font-size: 2.375em;
+}
+
+h2 {
+  font-size: 2.160em;
 }
 
 ul.action-links {
   padding-left: 0px;
 }
 
-.features-export-component .fieldset-legend {
-  margin-left: 0.5em;
+#block-system-main .fieldset-wrapper .form-item-filters-per-page,
+#block-system-main .fieldset-wrapper .form-item-filters-types {
+  overflow: hidden;
 }
 
 .form-item-name .description,
 .form-item-uid .description {
   display: none;
-}
-
-#block-system-main .fieldset-wrapper .form-item-filters-per-page,
-#block-system-main .fieldset-wrapper .form-item-filters-types {
-  overflow: hidden;
 }
 
 [dir="ltr"] fieldset.collapsible .fieldset-legend:before {
@@ -38,30 +45,8 @@ ul.action-links {
   border-color: transparent transparent #008fdc #008fdc;
 }
 
-.page-admin-structure-views .ui-widget-overlay {
-  position: fixed;
-}
-
 .drag .tabledrag-handle, .tabledrag-handle:hover, .tabledrag-handle:active, .tabledrag-handle:focus {
   color: #008fdc;
-}
-
-.views-ui-dialog #edit-selected {
-  display: block;
-  position: relative;
-  padding: 0px 16px 30px 30px;
-}
-
-.views-ui-dialog .scroll {
-  padding: 0em 2em 3em;
-}
-
-.views-ui-dialog #views-filterable-options-controls {
-  padding-top: 0px;
-}
-
-#views-ui-preview-form > div > div#preview-submit-wrapper {
-  margin: 0em .5em 0 0;
 }
 
 /* Animated throbber */
@@ -81,51 +66,16 @@ html.js[dir="ltr"] .throbbing {
   /* LTR */
 }
 
-.page-node-edit .ui-widget-overlay {
-  position: fixed;
-}
-
-.page-media-browser #media-browser-page-wrapper {
-  border-top: none;
-}
-
-.ui-dialog-titlebar .ui-icon-closethick {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-
-.media-wrapper
-.ui-dialog-titlebar {
-  background-color: #2fa6e5;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 10px;
-  padding-left: 30px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-}
-.media-wrapper
-.ui-dialog-titlebar .ui-icon-closethick {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-
-.media-wrapper
-.ui-dialog .ui-dialog-titlebar-close {
-  right: .6em;
+/* =============================================================================
+   Features
+   ========================================================================== */
+.features-export-component .fieldset-legend {
+  margin-left: 0.5em;
 }
 
 /* =============================================================================
    Media
    ========================================================================== */
-#media-browser-page-wrapper {
-  border: 1px solid #000;
-}
 #media-browser-page-wrapper #media-browser-tabset .media-browser-tab {
   padding: 1em;
 }
@@ -137,6 +87,20 @@ html.js[dir="ltr"] .throbbing {
 }
 #media-browser-page-wrapper #media-browser-tabset #branding #media-tabs-wrapper ul.tabs.primary {
   margin: 1em 0em;
+}
+
+.media-wrapper
+.ui-dialog-titlebar {
+  background-color: #2fa6e5;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.media-wrapper
+.ui-dialog .ui-dialog-titlebar-close {
+  right: .6em;
 }
 
 /* =============================================================================
@@ -206,14 +170,13 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
   color: #008fdc;
 }
 
-.views-ui-dialog .form-buttons {
-  padding: 1.5em 0em;
+.page-node-edit .ui-widget-overlay {
+  position: fixed;
 }
-.views-ui-dialog #edit-cancel {
-  margin: 0em 1em;
-}
-.views-ui-dialog #edit-submit {
-  margin: 0em 1em;
+
+.page-node-add h1#wb-cont,
+.page-node-edit h1#wb-cont {
+  margin-top: 0px;
 }
 
 fieldset.collapsible .fieldset-legend:after {
@@ -256,6 +219,42 @@ table.sticky-header {
 }
 .views-ui-dialog .form-wrapper .collapsed legend {
   margin-bottom: 0px;
+}
+
+.views-ui-dialog .form-buttons {
+  padding: 1.5em 0em;
+}
+.views-ui-dialog #edit-cancel {
+  margin: 0em 1em;
+}
+.views-ui-dialog #edit-submit {
+  margin: 0em 1em;
+}
+
+.views-exposed-form .views-exposed-widget {
+  overflow: hidden;
+}
+
+.views-ui-dialog #edit-selected {
+  display: block;
+  position: relative;
+  padding: 0px 16px 30px 30px;
+}
+
+.views-ui-dialog .scroll {
+  padding: 0em 2em 3em;
+}
+
+.views-ui-dialog #views-filterable-options-controls {
+  padding-top: 0px;
+}
+
+#views-ui-preview-form > div > div#preview-submit-wrapper {
+  margin: 0em .5em 0 0;
+}
+
+.page-admin-structure-views .ui-widget-overlay {
+  position: fixed;
 }
 
 /* =============================================================================

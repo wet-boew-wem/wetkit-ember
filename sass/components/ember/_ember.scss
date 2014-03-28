@@ -2,34 +2,17 @@
    Ember
    ========================================================================== */
 
-.ctools-content {
-  ul {
-    padding-left: 0px;
-  }
+h1 {
+  font-size: 2.375em;
 }
 
-.views-exposed-form {
-  .views-exposed-widget {
-    overflow: hidden;
-  }
+h2 {
+  font-size: 2.160em;
 }
 
 ul {
   &.action-links {
     padding-left: 0px;
-  }
-}
-
-.features-export-component {
-  .fieldset-legend {
-    margin-left: 0.5em;
-  }
-}
-
-.form-item-name,
-.form-item-uid {
-  .description {
-    display: none;
   }
 }
 
@@ -39,6 +22,13 @@ ul {
     .form-item-filters-types {
       overflow: hidden;
     }
+  }
+}
+
+.form-item-name,
+.form-item-uid {
+  .description {
+    display: none;
   }
 }
 
@@ -61,32 +51,8 @@ fieldset {
   }
 }
 
-.page-admin-structure-views {
-  .ui-widget-overlay {
-    position: fixed;
-  }
-}
-
 .drag .tabledrag-handle, .tabledrag-handle:hover, .tabledrag-handle:active, .tabledrag-handle:focus {
   color: #008fdc;
-}
-
-.views-ui-dialog #edit-selected {
-  display: block;
-  position: relative;
-  padding: 0px 16px 30px 30px;
-}
-
-.views-ui-dialog .scroll {
-  padding: 0em 2em 3em;
-}
-
-.views-ui-dialog #views-filterable-options-controls {
-  padding-top: 0px;
-}
-
-#views-ui-preview-form > div > div#preview-submit-wrapper {
-  margin: 0em .5em 0 0;
 }
 
 /* Animated throbber */
@@ -108,46 +74,4 @@ html.js {
       background-position: 100% center; /* LTR */
     }
   }
-}
-
-.page-node-edit {
-  .ui-widget-overlay {
-    position: fixed;
-  }
-}
-
-.page-media-browser #media-browser-page-wrapper {
-  border-top: none;
-}
-
-.ui-dialog-titlebar {
-  .ui-icon-closethick {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-}
-
-.media-wrapper
-.ui-dialog-titlebar {
-  .ui-icon-closethick {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-  background-color: #2fa6e5;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 10px;
-  padding-left: 30px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.media-wrapper
-.ui-dialog .ui-dialog-titlebar-close {
-  right: .6em;
 }
