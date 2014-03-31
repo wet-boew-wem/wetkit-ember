@@ -5,12 +5,8 @@
   padding-left: 0px;
 }
 
-.ctools-collapsible-container .ctools-collapsible-handle {
+.page-node .ctools-collapsible-container .ctools-collapsible-handle {
   background: #CCC;
-}
-
-.views-displays .ctools-collapsible-container .ctools-collapsible-handle {
-  background: none;
 }
 
 /* =============================================================================
