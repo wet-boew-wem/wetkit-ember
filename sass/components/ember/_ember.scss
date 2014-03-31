@@ -79,3 +79,12 @@ html.js {
 .wetkit-site-overview p {
   max-width: none;
 }
+
+.ui-widget-overlay {
+  position: fixed;
+}
+
+.ui-dialog .ui-dialog-titlebar-close span {
+  margin-left: -8px;
+  margin-top: -8px;
+}
