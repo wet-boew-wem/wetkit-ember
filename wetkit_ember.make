@@ -8,6 +8,6 @@ api = 2
 projects[ember][version] = 2.x-dev
 projects[ember][type] = theme
 projects[ember][download][type] = git
-projects[ember][download][revision] = 6feb24a
+projects[ember][download][revision] = 9e353a5
 projects[ember][download][branch] = 7.x-2.x
 projects[ember][patch][2183687] = http://drupal.org/files/issues/ember_ui_icons-2183687-6.patch
