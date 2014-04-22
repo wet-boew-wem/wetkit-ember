@@ -24,6 +24,24 @@ ul.action-links {
   padding-left: 0px;
 }
 
+#branding {
+  color: #FFF;
+  background-color: #555555;
+}
+#branding h1.page-title {
+  margin: 0.25em 0em 0.25em 0em;
+}
+#branding .breadcrumb {
+  color: #fff;
+  margin: 0;
+}
+#branding .breadcrumb a {
+  color: #fff;
+}
+#branding .breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 #block-system-main .fieldset-wrapper .form-item-filters-per-page,
 #block-system-main .fieldset-wrapper .form-item-filters-types {
   overflow: hidden;
@@ -170,11 +188,6 @@ div.vertical-tabs .vertical-tabs-pane fieldset legend {
   display: block;
 }
 
-#branding {
-  color: #FFF;
-  background-color: #555555;
-}
-
 .form-managed-file .form-file {
   margin-bottom: 1em;
 }
@@ -213,6 +226,11 @@ table.sticky-header {
    ========================================================================== */
 .views-displays .secondary .active a, .views-displays .secondary .active a:hover {
   border-color: #008fdc;
+}
+
+.views-displays .views-display-settings {
+  clear: both;
+  margin-top: 4em;
 }
 
 .views-ui-display-tab-actions .ctools-button-processed input {
