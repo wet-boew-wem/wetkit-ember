@@ -16,7 +16,7 @@ ul {
   }
 }
 
-div#branding {
+#branding {
   color: #FFF;
   background-color: #555555;
   h1.page-title {
@@ -30,11 +30,6 @@ div#branding {
       &:hover {
         text-decoration: underline;
       }
-    }
-  }
-  ul.secondary {
-    a.active {
-      color: #008fdc;
     }
   }
 }
