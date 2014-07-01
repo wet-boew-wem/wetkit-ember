@@ -9,7 +9,7 @@
 /**
  * Override or insert variables into the page template.
  */
-function wetkit_ember_preprocess_page(&$variables) {
+function wetkit_ember_preprocess_region(&$variables) {
   if (module_exists('wetkit_language')) {
     $variables['lang_bar'] = '<div class="breadcrumb-side"><ul><li>' . $variables['menu_lang_bar'] . '</li></ul></div>';
   }

@@ -24,22 +24,25 @@ ul.action-links {
   padding-left: 0px;
 }
 
-#branding {
+div#branding {
   color: #FFF;
   background-color: #555555;
 }
-#branding h1.page-title {
+div#branding h1.page-title {
   margin: 0.25em 0em 0.25em 0em;
 }
-#branding .breadcrumb {
+div#branding .breadcrumb {
   color: #fff;
   margin: 0;
 }
-#branding .breadcrumb a {
+div#branding .breadcrumb a {
   color: #fff;
 }
-#branding .breadcrumb a:hover {
+div#branding .breadcrumb a:hover {
   text-decoration: underline;
+}
+div#branding ul.secondary a.active {
+  color: #008fdc;
 }
 
 #block-system-main .fieldset-wrapper .form-item-filters-per-page,
@@ -161,6 +164,14 @@ html.js[dir="ltr"] .throbbing {
   border-color: #ffffff;
 }
 
+th.active a:before {
+  border-bottom: 2px solid #008fdc;
+  top: -2px;
+  background-color: white;
+  height: 100%;
+  z-index: -1;
+}
+
 .tabs.primary {
   margin: 1em 0 1em 0;
   padding: 0;
@@ -171,6 +182,9 @@ ul.secondary {
   padding: .5em 3.5em;
   background-color: #3b3b3b;
   box-shadow: none;
+}
+ul.secondary a.active {
+  color: #008fdc;
 }
 
 #tab-bar ul.secondary {
