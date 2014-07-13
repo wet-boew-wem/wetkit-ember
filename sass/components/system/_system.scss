@@ -104,3 +104,18 @@ fieldset.collapsible .fieldset-legend:after {
 table.sticky-header {
   position:relative !important;
 }
+
+.content {
+  .left, .right {
+    &.clearfix {
+      clear: none;
+    }
+  }
+  .system-themes-list {
+    .theme-selector {
+      &.clearfix {
+        clear: none;
+      }
+    }
+  }
+}

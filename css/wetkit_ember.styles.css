@@ -235,6 +235,13 @@ table.sticky-header {
   position: relative !important;
 }
 
+.content .left.clearfix, .content .right.clearfix {
+  clear: none;
+}
+.content .system-themes-list .theme-selector.clearfix {
+  clear: none;
+}
+
 /* =============================================================================
    Views
    ========================================================================== */
