@@ -236,6 +236,10 @@ table.sticky-header {
   clear: both;
   margin-top: 4em;
 }
+.views-displays .views-display-settings .ctools-dropbutton-wrapper {
+  position: relative;
+  min-height: initial;
+}
 
 .views-ui-display-tab-actions .ctools-button-processed input {
   color: #008fdc;
