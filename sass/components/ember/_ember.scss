@@ -32,6 +32,11 @@ ul {
       }
     }
   }
+  ul.secondary {
+    a.active {
+      color: #008fdc;
+    }
+  }
 }
 
 #block-system-main {
