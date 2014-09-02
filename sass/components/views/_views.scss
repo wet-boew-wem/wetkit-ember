@@ -9,6 +9,10 @@
 .views-displays .views-display-settings {
   clear: both;
   margin-top: 4em;
+  .ctools-dropbutton-wrapper {
+    position: relative;
+    min-height: initial;
+  }
 }
 
 .views-ui-display-tab-actions .ctools-button-processed input {

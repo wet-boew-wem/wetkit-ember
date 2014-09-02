@@ -16,7 +16,7 @@ ul {
   }
 }
 
-div#branding {
+#branding {
   color: #FFF;
   background-color: #555555;
   h1.page-title {
@@ -97,6 +97,10 @@ html.js {
       background-position: 100% center; /* LTR */
     }
   }
+}
+
+.token-tree .expander {
+  margin-left: 0px!important;
 }
 
 .wetkit-site-overview p {

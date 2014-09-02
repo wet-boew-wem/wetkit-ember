@@ -24,24 +24,24 @@ ul.action-links {
   padding-left: 0px;
 }
 
-div#branding {
+#branding {
   color: #FFF;
   background-color: #555555;
 }
-div#branding h1.page-title {
+#branding h1.page-title {
   margin: 0.25em 0em 0.25em 0em;
 }
-div#branding .breadcrumb {
+#branding .breadcrumb {
   color: #fff;
   margin: 0;
 }
-div#branding .breadcrumb a {
+#branding .breadcrumb a {
   color: #fff;
 }
-div#branding .breadcrumb a:hover {
+#branding .breadcrumb a:hover {
   text-decoration: underline;
 }
-div#branding ul.secondary a.active {
+#branding ul.secondary a.active {
   color: #008fdc;
 }
 
@@ -85,6 +85,10 @@ html.js[dir="ltr"] .throbbing {
   display: inline;
   background-position: 100% center;
   /* LTR */
+}
+
+.token-tree .expander {
+  margin-left: 0px !important;
 }
 
 .wetkit-site-overview p {
@@ -252,6 +256,10 @@ table.sticky-header {
 .views-displays .views-display-settings {
   clear: both;
   margin-top: 4em;
+}
+.views-displays .views-display-settings .ctools-dropbutton-wrapper {
+  position: relative;
+  min-height: initial;
 }
 
 .views-ui-display-tab-actions .ctools-button-processed input {
