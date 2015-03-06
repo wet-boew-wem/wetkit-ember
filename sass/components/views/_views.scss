@@ -2,7 +2,8 @@
    Views
    ========================================================================== */
 
-.views-displays .secondary .active a, .views-displays .secondary .active a:hover {
+.views-displays .secondary .active a,
+.views-displays .secondary .active a:hover {
   border-color: #008fdc;
 }
 
@@ -33,18 +34,6 @@
     legend {
       margin-bottom: 0px;
     }
-  }
-}
-
-.views-ui-dialog {
-  .form-buttons {
-    padding: 1.5em 0em;
-  }
-  #edit-cancel {
-    margin: 0em 1em;
-  }
-  #edit-submit {
-    margin: 0em 1em;
   }
 }
 
