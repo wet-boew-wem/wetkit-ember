@@ -144,8 +144,9 @@ html.js[dir="ltr"] .throbbing {
 /* =============================================================================
    Module Filter
    ========================================================================== */
-#module-filter-squeeze table {
-  clear: none;
+form#system-modules #module-filter-modules th:nth-child(4),
+form#system-modules #module-filter-modules td:nth-child(4) {
+  width: auto;
 }
 
 /* =============================================================================
@@ -249,7 +250,8 @@ table.sticky-header {
 /* =============================================================================
    Views
    ========================================================================== */
-.views-displays .secondary .active a, .views-displays .secondary .active a:hover {
+.views-displays .secondary .active a,
+.views-displays .secondary .active a:hover {
   border-color: #008fdc;
 }
 
@@ -279,16 +281,6 @@ table.sticky-header {
 }
 .views-ui-dialog .form-wrapper .collapsed legend {
   margin-bottom: 0px;
-}
-
-.views-ui-dialog .form-buttons {
-  padding: 1.5em 0em;
-}
-.views-ui-dialog #edit-cancel {
-  margin: 0em 1em;
-}
-.views-ui-dialog #edit-submit {
-  margin: 0em 1em;
 }
 
 .views-exposed-form .views-exposed-widget {
