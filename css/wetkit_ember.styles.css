@@ -28,9 +28,6 @@ ul.action-links {
   color: #FFF;
   background-color: #555555;
 }
-#branding h1.page-title {
-  margin: 0.25em 0em 0.25em 0em;
-}
 #branding .breadcrumb {
   color: #fff;
   margin: 0;
@@ -48,6 +45,14 @@ ul.action-links {
 #block-system-main .fieldset-wrapper .form-item-filters-per-page,
 #block-system-main .fieldset-wrapper .form-item-filters-types {
   overflow: hidden;
+}
+
+#page {
+  margin: 2.5rem 2.25em 0;
+}
+
+.page-media-format-form #page {
+  margin: 0.75rem 1.25em 0;
 }
 
 .form-item-name .description,

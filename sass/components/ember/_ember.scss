@@ -19,9 +19,6 @@ ul {
 #branding {
   color: #FFF;
   background-color: #555555;
-  h1.page-title {
-    margin: 0.25em 0em 0.25em 0em;
-  }
   .breadcrumb {
     color: #fff;
     margin: 0;
@@ -45,6 +42,16 @@ ul {
     .form-item-filters-types {
       overflow: hidden;
     }
+  }
+}
+
+#page {
+  margin: 2.5rem 2.25em 0;
+}
+
+.page-media-format-form {
+  #page {
+   margin: 0.75rem 1.25em 0;
   }
 }
 

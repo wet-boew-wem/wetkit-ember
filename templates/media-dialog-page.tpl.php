@@ -66,16 +66,12 @@
  * @see template_process()
  */
 ?>
-
-<?php
-  hide($page['content']['system_main']['tabset']['tabs']['#secondary']);
-?>
-
+<?php if (isset($messages)) { print $messages; } ?>
 <div id="media-browser-page-wrapper">
   <div id="media-browser-page">
     <div id="media-browser-tabset">
       <div id="branding" class="clearfix">
-      <?php if (!empty($variables['title'])): ?>
+      <?php if (isset($page['content']['system_main']['title']) && !empty($page['content']['system_main']['title'])): ?>
         <h1 class="page-title"><?php print render($page['content']['system_main']['title']); ?></h1>
       <?php endif; ?>
         <div id="media-tabs-wrapper">
@@ -97,6 +93,6 @@
           ?>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+    </div> <!-- /#media-tabs-set -->
+  </div> <!--  /#media-browser-page -->
+</div> <!-- /#media-browser-page-wrapper -->
