@@ -66,7 +66,6 @@
  * @see template_process()
  */
 ?>
-<?php if (isset($messages)) { print $messages; } ?>
 <div id="media-browser-page-wrapper">
   <div id="media-browser-page">
     <div id="media-browser-tabset">
